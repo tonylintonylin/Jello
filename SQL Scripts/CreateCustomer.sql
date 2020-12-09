@@ -34,6 +34,8 @@
 /* Insert Data */
 /* Identity (none) */
 
+/* Indexes Start Here */
+
 if exists (select 1
             from  sysindexes
            where  id    = object_id('Customer')
