@@ -26,6 +26,10 @@ namespace Jello.Areas.Projects
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
 
+        // Related Lists
+        public string Tab { get; set; } = "details";
+        public _ThingsE ThingsE { get; set; } = new _ThingsE { ParentIdName = "ThingDId" };
+
         #endregion
 
         #region Handlers

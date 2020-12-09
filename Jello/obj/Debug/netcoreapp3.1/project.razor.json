@@ -15024,6 +15024,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\Detail.cshtml",
+      "TargetPath": "Areas\\Projects\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_ViewImports.cshtml",
       "TargetPath": "Areas\\_ViewImports.cshtml",
       "FileKind": "mvc"
