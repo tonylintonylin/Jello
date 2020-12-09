@@ -1,3 +1,4 @@
+using Jello.Areas._Related;
 using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,7 @@ namespace Jello.Areas.Projects
 
         // Related Lists
         public string Tab { get; set; } = "details";
-        public _ThingsE ThingsE { get; set; } = new _ThingsE { ParentIdName = "ThingDId" };
+        public _Issues Issues { get; set; } = new _Issues { ParentIdName = "ProjectId" };
 
         #endregion
 
