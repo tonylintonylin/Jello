@@ -5,6 +5,11 @@ namespace Jello.Domain
 {
     public partial class Project
     {
+        public Project()
+        {
+            Issue = new HashSet<Issue>();
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -17,5 +22,8 @@ namespace Jello.Domain
         public int? CreatedBy { get; set; }
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
+
+        public virtual User Owner { get; set; }
+        public virtual ICollection<Issue> Issue { get; set; }
     }
 }

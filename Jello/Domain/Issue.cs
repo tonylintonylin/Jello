@@ -22,5 +22,7 @@ namespace Jello.Domain
         public int? CreatedBy { get; set; }
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
+
+        public virtual User Owner { get; set; }
     }
 }
