@@ -37,13 +37,13 @@ namespace Jello
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
         private readonly ILoggerFactory _loggerFactory;
 
         public IdentityService(UserManager<IdentityUser> userManager,
                                SignInManager<IdentityUser> signInManager,
                                RoleManager<IdentityRole> roleManager, 
-                               UltraContext db, 
+                               JelloContext db, 
                                ILoggerFactory loggerFactory)
         {
             _userManager = userManager;

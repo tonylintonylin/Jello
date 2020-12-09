@@ -72,10 +72,10 @@ namespace Jello
             });
 
             // Database contexts: For localdb connectionString's path is calculated
-            var connectionString = _config.GetConnectionString("Ultra")
+            var connectionString = _config.GetConnectionString("Jello")
                                           .Replace("{Path}", _env.ContentRootPath);
 
-            services.AddDbContext<UltraContext>(options =>
+            services.AddDbContext<JelloContext>(options =>
                                      options.UseSqlServer(connectionString));
             services.AddDbContext<ApplicationDbContext>(options =>
                                      options.UseSqlServer(connectionString));
@@ -94,7 +94,7 @@ namespace Jello
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
-                              IHttpContextAccessor httpContextAccessor, UltraContext db)
+                              IHttpContextAccessor httpContextAccessor, JelloContext db)
         {
             ServiceLocator.Register(httpContextAccessor);
 

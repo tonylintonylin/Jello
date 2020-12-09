@@ -21,7 +21,7 @@ namespace Jello
 
         // Scoped lifetime
         protected ICache _cache => HttpContext.RequestServices.GetService<ICache>();
-        protected UltraContext _db => HttpContext.RequestServices.GetService<UltraContext>();
+        protected JelloContext _db => HttpContext.RequestServices.GetService<JelloContext>();
 
         #endregion
     }

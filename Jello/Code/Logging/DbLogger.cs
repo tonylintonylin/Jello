@@ -55,7 +55,7 @@ namespace Jello
                 catch { }
 
                 // Extract connectionstring from potentially unstable dbcontext.
-                var unstable = ServiceLocator.Resolve<UltraContext>();
+                var unstable = ServiceLocator.Resolve<JelloContext>();
                 var connectionString = unstable.Database.GetDbConnection().ConnectionString;
 
                 // Use brand new context
@@ -71,7 +71,7 @@ namespace Jello
             }
         }
 
-        private class ErrorContext : UltraContext
+        private class ErrorContext : JelloContext
         {
             private readonly string _connectionString;
 

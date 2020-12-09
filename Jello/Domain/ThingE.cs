@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Jello.Domain
 {
-    public partial class ThingE : IAuditable
+    public partial class ThingE
     {
         public int Id { get; set; }
         public string Name { get; set; }

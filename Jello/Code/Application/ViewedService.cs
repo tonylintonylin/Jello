@@ -21,9 +21,9 @@ namespace Jello
         #region Dependency Injection
 
         private readonly ICurrentUser _currentUser;
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
 
-        public ViewedService(UltraContext db, ICurrentUser currentUser)
+        public ViewedService(JelloContext db, ICurrentUser currentUser)
         {
             _db = db;
             _currentUser = currentUser;

@@ -27,7 +27,7 @@ namespace Jello
         private IEmail email;
         private IMapper mapper;
         private IRollup rollup;
-        private UltraContext db;
+        private JelloContext db;
         private IRelated related;
         private IWebHostEnvironment env;
         private ICurrentUser currentUser;
@@ -40,7 +40,7 @@ namespace Jello
         protected IExcel _excel => excel ??= HttpContext.RequestServices.GetService<IExcel>();
         protected IMapper _mapper => mapper ??= HttpContext.RequestServices.GetService<IMapper>();
         protected IRollup _rollup => rollup ??= HttpContext.RequestServices.GetService<IRollup>();
-        protected UltraContext _db => db ??= HttpContext.RequestServices.GetService<UltraContext>();
+        protected JelloContext _db => db ??= HttpContext.RequestServices.GetService<JelloContext>();
         protected IRelated _related => related ??= HttpContext.RequestServices.GetService<IRelated>();
         protected IWebHostEnvironment _env => env ??= HttpContext.RequestServices.GetService<IWebHostEnvironment>();
         protected ICurrentUser _currentUser => currentUser ??= HttpContext.RequestServices.GetService<ICurrentUser>();

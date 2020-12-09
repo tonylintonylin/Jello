@@ -17,14 +17,14 @@ namespace Jello
         #region Dependency Injection
 
         private readonly ICache _cache;
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
         private readonly ILoggerFactory _loggerFactory;
 
         public ClaimsPrincipalFactory(
             UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
             IOptions<IdentityOptions> optionsAccessor,
-            UltraContext db,
+            JelloContext db,
             ICache cache,
             ILoggerFactory loggerFactory) : base(userManager, roleManager, optionsAccessor)
         {

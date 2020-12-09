@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Jello.Domain
 {
-    public partial class Error : IAuditable
+    public partial class Error
     {
         public int Id { get; set; }
         public int? UserId { get; set; }

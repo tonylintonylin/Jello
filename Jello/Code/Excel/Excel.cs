@@ -42,13 +42,13 @@ namespace Jello
 
         private readonly IWebHostEnvironment _env;
         private readonly ICurrentUser _currentUser;
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
         private readonly ICache _cache;
         private readonly ILoggerFactory _loggerFactory;
 
         private string Qualify(string fileName) => Path.Combine(_env.ContentRootPath, @"Data\Imports", fileName);
 
-        public Excel(IWebHostEnvironment env, ICurrentUser currentUser, UltraContext db,
+        public Excel(IWebHostEnvironment env, ICurrentUser currentUser, JelloContext db,
                     ICache cache, ILoggerFactory loggerFactory)
         {
             _env = env;

@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace Jello.Domain
 {
-    public partial class UltraContext : DbContext
+    public partial class JelloContext : DbContext
     {
-        public UltraContext() { }
+        public JelloContext() { }
 
-        public UltraContext(DbContextOptions<UltraContext> options) : base(options) { }
+        public JelloContext(DbContextOptions<JelloContext> options) : base(options) { }
 
+        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Error> Error { get; set; }
         public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<ThingA> ThingA { get; set; }

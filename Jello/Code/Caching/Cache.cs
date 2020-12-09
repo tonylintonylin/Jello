@@ -63,9 +63,9 @@ namespace Jello
 
         private readonly ICurrentUser _currentUser;
         private readonly IMemoryCache _memoryCache;
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
 
-        public Cache(ICurrentUser currentUser, IMemoryCache memoryCache, UltraContext db)
+        public Cache(ICurrentUser currentUser, IMemoryCache memoryCache, JelloContext db)
         {
             _currentUser = currentUser;
             _memoryCache = memoryCache;

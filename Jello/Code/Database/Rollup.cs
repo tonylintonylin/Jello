@@ -26,9 +26,9 @@ namespace Jello
     {
         #region Dependency Injection
 
-        private readonly UltraContext _db;
+        private readonly JelloContext _db;
 
-        public Rollup(UltraContext db) { _db = db; }
+        public Rollup(JelloContext db) { _db = db; }
 
         #endregion
 
