@@ -41,9 +41,9 @@
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Project') and o.name = 'FK_Project_REFERENCE_USER')
+   where r.fkeyid = object_id('Project') and o.name = 'FK_PROJECT_REFERENCE_USER')
 alter table Project
-   drop constraint FK_Project_REFERENCE_USER
+   drop constraint FK_PROJECT_REFERENCE_USER
 go
 
 /* Indexes including primary key Id Start Here (Backwards)*/
