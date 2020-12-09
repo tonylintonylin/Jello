@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Jello
 {
-    // Sets the currently active menu
+    // Confirms the currently active menu
 
     public class MenuAttribute : ActionFilterAttribute
     {

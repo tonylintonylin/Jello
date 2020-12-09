@@ -29,7 +29,6 @@ namespace Jello.Domain
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
 
-        public virtual User Owner { get; set; }
         public virtual ICollection<ThingE> ThingE { get; set; }
     }
 }
