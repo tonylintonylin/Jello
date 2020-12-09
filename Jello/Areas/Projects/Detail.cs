@@ -1,0 +1,58 @@
+using Jello.Domain;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
+
+namespace Jello.Areas.Projects
+{
+    public class Detail : BaseModel
+    {
+        #region Data
+
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public int TotalIssues { get; set; }
+
+        public int? OwnerId { get; set; }
+        public string OwnerAlias { get; set; }
+        public string OwnerName { get; set; }
+        
+        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime ChangedOn { get; set; }
+        public int? ChangedBy { get; set; }
+
+        #endregion
+
+        #region Handlers
+
+        public override async Task<IActionResult> GetAsync()
+        {
+            var Project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
+            _mapper.Map(Project, this);
+            
+            await _viewedService.Log(Id, "Project", Project.Title);
+
+            return View(this);
+        }
+
+        #endregion
+
+        #region Mapping
+
+        public class MapperProfile : BaseProfile
+        {
+            public MapperProfile()
+            {
+                CreateMap<Project, Detail>()
+                  .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => _cache.Users[src.OwnerId].Name));
+            }
+        }
+
+        #endregion
+    }
+}
