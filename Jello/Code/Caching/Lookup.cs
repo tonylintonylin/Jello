@@ -21,6 +21,8 @@ namespace Jello
         List<SelectListItem> ThingDStatuses { get; }
         List<SelectListItem> ThingEStatuses { get; }
 
+        List<SelectListItem> ProjectTypes { get; }
+
         List<SelectListItem> UserRoles { get; }
 
     }
@@ -179,6 +181,19 @@ namespace Jello
             }
         }
 
+        public List<SelectListItem> ProjectTypes
+        {
+            get
+            {
+                var list = new List<SelectListItem>();
+                list.Add(new SelectListItem { Value = "", Text = "-- None --", Selected = true });
+                list.Add(new SelectListItem { Value = "Business", Text = "Business" });
+                list.Add(new SelectListItem { Value = "Software", Text = "Software" });
+                list.Add(new SelectListItem { Value = "Service", Text = "Service" });
+
+                return list;
+            }
+        }
 
         public List<SelectListItem> UserRoles
         {

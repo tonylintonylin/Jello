@@ -14,6 +14,7 @@ namespace Jello
         List<SelectListItem> ThingCItems { get; }
         List<SelectListItem> ThingDItems { get; }
         List<SelectListItem> ThingEItems { get; }
+        List<SelectListItem> ProjectItems { get; }
 
         List<SelectListItem> PeopleItems { get; }
         List<SelectListItem> ErrorItems { get; }
@@ -84,6 +85,19 @@ namespace Jello
                 list.Add(new SelectListItem { Value = "0", Text = "All Things E", Selected = true });
                 list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
                 list.Add(new SelectListItem { Value = "2", Text = "All My Things E" });
+
+                return list;
+            }
+        }
+
+        public List<SelectListItem> ProjectItems
+        {
+            get
+            {
+                var list = new List<SelectListItem>();
+                list.Add(new SelectListItem { Value = "0", Text = "All Projects", Selected = true });
+                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
+                list.Add(new SelectListItem { Value = "2", Text = "All My Projects" });
 
                 return list;
             }

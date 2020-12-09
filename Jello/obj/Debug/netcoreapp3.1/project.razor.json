@@ -15059,6 +15059,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\List.cshtml",
+      "TargetPath": "Areas\\Projects\\List.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ForgotConfirm.cshtml",
       "TargetPath": "Areas\\Auth\\ForgotConfirm.cshtml",
       "FileKind": "mvc"

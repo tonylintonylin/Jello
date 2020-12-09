@@ -439,3 +439,4 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Jello.csproj.CopyComp
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Jello.dll
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Jello.pdb
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Jello.genruntimeconfig.cache
+C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\List.cshtml.g.cs
