@@ -33,32 +33,27 @@
 </div>
 
 <div class="tab-content">
-@* 
+
     <div class='tab-pane @(Model.Tab == "details" ? "active" : "")' id="details">
         <div class="tab-pane-row row">
 
             <div class="col-12 col-md-6">
                 <outputLink value="OwnerId" name="OwnerName" type="Owner" label="Thing D Owner"></outputLink>
-                <outputField value="Name"></outputField>
-                <outputField value="Text"></outputField>
-                <outputField value="LongText"></outputField>
-                <outputCheckBox value="Boolean"></outputCheckBox>
-
+                <outputField value="Title"></outputField>
+                <outputField value="Description"></outputField>
             </div>
 
             <div class="col-12 col-md-6">
-                <outputField value="DateTime" label="Date Time"></outputField>
-                <outputField value="Money" label="Money"></outputField>
-                <outputField value="Integer"></outputField>
-                <outputField value="Lookup"></outputField>
-                <outputField value="Status"></outputField>
+                <outputField value="Type" label="Type"></outputField>
+                <outputField value="TotalIssues" label="TotalIssues"></outputField>
+                <outputField value="CreatedDate" label="Created"></outputField>
             </div>
         </div>
     </div>
 
     <div class='tab-pane @(Model.Tab == "issues" ? "active" : "")' id="issues">
-        <partial name="_ThingE" model="Model.Issues" />
-    </div> *@
+        <partial name="_Issue" model="Model.Issues" />
+    </div>
 
 
 </div>
