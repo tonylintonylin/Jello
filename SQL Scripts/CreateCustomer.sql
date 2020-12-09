@@ -1,9 +1,38 @@
+/*==============================================================*/
+/* Data Model + Data for the 'Jello' database              */
+/*==============================================================*/
 
 /*==============================================================*/
-/* Data Model + Data for the 'Surfboards' database              */
-/* Copyright (C), Data & Object Factory, LLC                    */
-/* All rights reserved. www.dofactory.com                       */
+/* In a full script              */
 /*==============================================================*/
+
+/* Relationships */
+/* Indexes */
+/* Tables and Indexes */
+/* Alter table FK references */
+/* Insert Data */
+/* Identity */
+
+/*==============================================================*/
+/* For scripts that add entity with relationship              */
+/*==============================================================*/
+
+/* Relationships */
+/* Indexes */
+/* Tables and Indexes */
+/* Alter table FK references */
+/* Insert Data */
+
+/*==============================================================*/
+/* In this script              */
+/*==============================================================*/
+
+/* Relationships (none)*/
+/* Indexes */
+/* Tables and Indexes */
+/* Alter table FK references (none) */
+/* Insert Data */
+/* Identity (none) */
 
 if exists (select 1
             from  sysindexes
@@ -65,6 +94,8 @@ if exists (select 1
             and   type = 'U')
    drop table Customer
 go
+
+/* Tables */
 
 /*==============================================================*/
 /* Table: Customer                                              */
