@@ -24,8 +24,8 @@ namespace Jello.Areas.Projects
         [HttpPost("edit/{id?}")]
         public async Task<IActionResult> Edit(Edit model) => await model.PostAsync();
 
-        // [HttpPost("delete"), AjaxOnly]
-        // public async Task<IActionResult> Delete(Delete model) => await model.PostAsync();
+        [HttpPost("delete"), AjaxOnly]
+        public async Task<IActionResult> Delete(Delete model) => await model.PostAsync();
 
         #endregion
 

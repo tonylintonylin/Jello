@@ -442,3 +442,4 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Jello.genruntimeconfi
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\List.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\Detail.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\_Related\_Issue.cshtml.g.cs
+C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\Edit.cshtml.g.cs

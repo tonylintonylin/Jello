@@ -1,6 +1,7 @@
 using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace Jello.Areas.Projects
         public string Title { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         public int? OwnerId { get; set; }
         public string OwnerAlias { get; set; }
@@ -47,6 +49,7 @@ namespace Jello.Areas.Projects
             if (Id == 0) // new item
             {
                 var project = _mapper.Map<Project>(this);
+                project.CreatedDate = DateTime.Now;
 
                 _db.Project.Add(project);
                 await _db.SaveChangesAsync();

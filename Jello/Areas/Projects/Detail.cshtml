@@ -12,7 +12,7 @@
     </div>
 
     <div class="d-flex">
-        <div class=" page-box-data-first">Issues<br />@Model.TotalIssues</div>
+        <div class=" page-box-data-first">Total Issues<br />@Model.TotalIssues</div>
         <div class=" page-box-data">Type<br />@Model.Type</div>
         <div class=" page-box-data-last">Created On<br />@Model.CreatedDate</div>
     </div>
@@ -38,15 +38,15 @@
         <div class="tab-pane-row row">
 
             <div class="col-12 col-md-6">
-                <outputLink value="OwnerId" name="OwnerName" type="Owner" label="Thing D Owner"></outputLink>
+                <outputLink value="OwnerId" name="OwnerName" type="Owner" label="Project Lead"></outputLink>
                 <outputField value="Title"></outputField>
                 <outputField value="Description"></outputField>
             </div>
 
             <div class="col-12 col-md-6">
                 <outputField value="Type" label="Type"></outputField>
-                <outputField value="TotalIssues" label="TotalIssues"></outputField>
-                <outputField value="CreatedDate" label="Created"></outputField>
+                <outputField value="TotalIssues" label="Total Issues"></outputField>
+                <outputField value="CreatedDate" label="Created On"></outputField>
             </div>
         </div>
     </div>
