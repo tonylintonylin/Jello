@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="col-4">
-                    <inputDropDown value="Type" items="Lookup.ProjectTypes"></inputDropDown>
+                    <inputDropDown value="Type" items="Lookup.IssueTypes"></inputDropDown>
                 </div>
 
                 <div class="col-4">
@@ -78,10 +78,10 @@
         <table class="table table-hover table-sm table-list">
             <tr class="bg-light">
                 <th class="width-50">&nbsp;</th>
-                <th><a sort="Title">Project Title</a></th>
+                <th><a sort="Title">Issue Title</a></th>
                 <th><a sort="Type">Type</a></th>
-                <th><a sort="TotalIssues">Total Issues</a></th>
-                <th><a sort="OwnerAlias">Project Lead</a></th>
+                <th><a sort="AssigneeName">Issue Assigned To</a></th>
+                <th><a sort="OwnerAlias">Issue Assigner</a></th>
                 <th><a sort="CreatedDate">Date Created</a></th>
                 <th>&nbsp;</th>
             </tr>
@@ -95,14 +95,13 @@
             {
                 <tr>
                     <td class="text-center">@(index++)</td>
-                    <td><a class="table-list-link" href="/projects/@item.Id?tab=issues">@item.Title</a></td>
+                    <td><a class="table-list-link" href="/issues/@item.Id?tab=details">@item.Title</a></td>
                     <td>@item.Type</td>
-                    <td><aggregate value="item.TotalIssues" href="/issues?AdvancedFilter=True&projectid=@item.Id"></aggregate></td>
                     <td><a class="table-list-link" href="/people/@item.OwnerId">@item.OwnerAlias</a></td>
                     <td>@item.CreatedDate</td>
                     <td class='text-right'>
-                        <a class="btn btn-xs btn-light" href="/projects/edit/@item.Id">Edit</a>&nbsp;
-                        <a class="btn btn-xs btn-light js-delete" href="/projects/delete" data-id="@item.Id">Delete</a>&nbsp; &nbsp;
+                        <a class="btn btn-xs btn-light" href="/issues/edit/@item.Id">Edit</a>&nbsp;
+                        <a class="btn btn-xs btn-light js-delete" href="/issues/delete" data-id="@item.Id">Delete</a>&nbsp; &nbsp;
                     </td>
 
                 </tr>
