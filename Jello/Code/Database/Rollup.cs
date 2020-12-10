@@ -52,12 +52,36 @@ namespace Jello
             await RollupThingsCAsync();
             await RollupThingsDAsync();
             await RollupThingsEAsync();
+
+            await RollupProjectsEAsync();
+            await RollupIssuesAsync();
+
             await RollupUsersAsync();
         }
 
         #endregion
 
         #region Table Rollups
+
+        private async Task RollupProjectsEAsync()
+        {
+            string sql =
+            @"UPDATE [Project] 
+                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId),
+                     TotalIssues = (SELECT COUNT(Issue.Id) FROM [Issue] WHERE [Issue].ProjectId = [Project].Id);";
+
+            await _db.Database.ExecuteSqlRawAsync(sql);
+        }
+
+        private async Task RollupIssuesAsync()
+        {
+            string sql =
+            @"UPDATE [Issue] 
+                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Issue].OwnerId),
+                     ProjectTitle = (SELECT Title FROM [Project] WHERE [Project].Id = [Issue].ProjectId),";
+
+            await _db.Database.ExecuteSqlRawAsync(sql);
+        }
 
         private async Task RollupThingsAAsync()
         {
