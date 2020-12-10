@@ -78,7 +78,7 @@ namespace Jello
             string sql =
             @"UPDATE [Issue] 
                  SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Issue].OwnerId),
-                     ProjectTitle = (SELECT Title FROM [Project] WHERE [Project].Id = [Issue].ProjectId),";
+                     ProjectTitle = (SELECT Title FROM [Project] WHERE [Project].Id = [Issue].ProjectId);";
 
             await _db.Database.ExecuteSqlRawAsync(sql);
         }
