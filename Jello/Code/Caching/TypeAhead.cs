@@ -16,6 +16,8 @@ namespace Jello
         string ThingsD { get; }
         string ThingsE { get; }
 
+        string Projects { get; }
+
         string Owners { get; }
     }
     #endregion
@@ -42,6 +44,18 @@ namespace Jello
                 var list = new List<TypeaheadItem>();
                 foreach (var thingA in _cache.ThingsA.Values)
                     list.Add(new TypeaheadItem { id = thingA.Id, name = thingA.Name, icon = _cache.ThingAIcon, type = "ThingA" });
+
+                return JsonConvert.SerializeObject(list);
+            }
+        }
+
+        public string Projects
+        {
+            get
+            {
+                var list = new List<TypeaheadItem>();
+                foreach (var project in _cache.Projects.Values)
+                    list.Add(new TypeaheadItem { id = project.Id, name = project.Title, icon = _cache.ProjectIcon, type = "Project" });
 
                 return JsonConvert.SerializeObject(list);
             }

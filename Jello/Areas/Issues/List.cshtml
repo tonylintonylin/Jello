@@ -48,7 +48,7 @@
                 </div>
                 
                 <div class="col-4">
-                    <inputDropDown value="Type" items="Lookup.IssueTypes"></inputDropDown>
+                    <inputSearch value="ProjectId" label="Project Title" placeholder="Search Projects.."></inputSearch>
                 </div>
 
                 <div class="col-4">
@@ -82,6 +82,7 @@
             <tr class="bg-light">
                 <th class="width-50">&nbsp;</th>
                 <th><a sort="Title">Issue Title</a></th>
+                <th><a sort="Project">Project Title</a></th>
                 <th><a sort="Type">Type</a></th>
                 <th><a sort="Status">Status</a></th>
                 <th><a sort="Priority">Priority</a></th>
@@ -101,6 +102,7 @@
                 <tr>
                     <td class="text-center">@(index++)</td>
                     <td><a class="table-list-link" href="/issues/@item.Id?tab=details">@item.Title</a></td>
+                    <td><a href="/thingsa/@(item.ProjectId)?tab=details">@item.ProjectTitle</a></td>
                     <td>@item.Type</td>
                     <td>@item.Status</td>
                     <td>@item.Priority</td>
@@ -132,7 +134,8 @@
     <script>
 
         $(function () {
-
+            
+            Dofactory.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
 
         });

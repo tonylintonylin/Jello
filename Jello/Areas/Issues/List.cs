@@ -17,7 +17,6 @@ namespace Jello.Areas.Issues
         public string Status { get; set; }
 
         public int? ProjectId { get; set; }
-        public string ProjectTitle { get; set; }
 
         public int? AssigneeId { get; set; }
         public string AssigneeName { get; set; }
@@ -57,9 +56,9 @@ namespace Jello.Areas.Issues
                     query = query.Where(c => c.Title.Contains(Title));
                 }
 
-                if (ProjectTitle != null)
+                if (ProjectId != null)
                 {
-                    query = query.Where(c => c.ProjectTitle.Contains(ProjectTitle));
+                    query = query.Where(c => c.ProjectId == ProjectId);
                 }
 
                 if (AssigneeId != null)
@@ -87,6 +86,8 @@ namespace Jello.Areas.Issues
             {
                 "Id" => query.OrderBy(c => c.Id),
                 "-Id" => query.OrderByDescending(c => c.Id),
+                "ProjectTitle" => query.OrderBy(c => c.ProjectTitle),
+                "-ProjectTitle" => query.OrderByDescending(c => c.ProjectTitle),
                 "Title" => query.OrderBy(c => c.Title),
                 "-Title" => query.OrderByDescending(c => c.Title),
                 "Type" => query.OrderBy(c => c.Type),
