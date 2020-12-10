@@ -17,7 +17,10 @@ namespace Jello
         string ThingCIcon { get; }
         string ThingDIcon { get; }
         string ThingEIcon { get; }
+
         string ProjectIcon { get; }
+        string IssueIcon { get; }
+
         string AdminIcon { get; }
         string UserIcon { get; }
         string PeopleIcon { get; }
@@ -29,6 +32,7 @@ namespace Jello
         Dictionary<int, ThingE> ThingsE { get; }
 
         Dictionary<int, Project> Projects { get; }
+        Dictionary<int, Issue> Issues { get; }
 
         Dictionary<int, User> Users { get; }
 
@@ -128,10 +132,10 @@ namespace Jello
                         dictionary.Add("ThingD", new MetaType { Name = "ThingD", Icon = "icon-globe icon-square icon-thingd", Url="/thingsd" });
                         dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
 
-                        dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-people icon-square icon-thinge", Url= "/projects" });
-                        dictionary.Add("Issue", new MetaType { Name = "Issue", Icon = "icon-people icon-square icon-thinge", Url= "/issues" });
+                        dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-folder icon-square icon-project", Url= "/projects" });
+                        dictionary.Add("Issue", new MetaType { Name = "Issue", Icon = "icon-pin icon-square icon-issue", Url= "/issues" });
 
-                        dictionary.Add("People", new MetaType { Name = "People", Icon = "icon-emotsmile icon-square icon-persons", Url = "/people" });
+                        dictionary.Add("People", new MetaType { Name = "People", Icon = "icon-people icon-square icon-persons", Url = "/people" });
                         dictionary.Add("Admin", new MetaType { Name = "Admin", Icon = "icon-settings icon-square icon-admin", Url = "/admin" });
                         dictionary.Add("Owner", new MetaType { Name = "Owner", Icon = "icon-user icon-square icon-owner", Url = "/people" });
                         dictionary.Add("User", new MetaType { Name = "User", Icon = "icon-user icon-square icon-owner", Url = "/admin/users" });
