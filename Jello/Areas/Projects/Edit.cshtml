@@ -1,7 +1,7 @@
-@model Jello.Areas.ThingsD.Edit
+@model Jello.Areas.Projects.Edit
 @{
-    var name = Model.Id == 0 ? "New Thing D" : "Edit: " + Model.Name;
-    ViewBag.Title = name;
+    var title = Model.Id == 0 ? "New Thing D" : "Edit: " + Model.Title;
+    ViewBag.Title = title;
 }
 
 <form method="post" asp-antiforgery="true">
@@ -10,8 +10,8 @@
     <input type="hidden" asp-for="Referer" />
 
     <div class="page-box">
-        <div class="page-box-icon"><a href="/thingsd"><i class="@Cache.ThingDIcon"></i></a> Thing D</div>
-        <div class="page-box-name">@name</div>
+        <div class="page-box-icon"><a href="/projects"><i class="@Cache.ThingDIcon"></i></a> Project</div>
+        <div class="page-box-name">@title</div>
     </div>
 
     <div class="edit-pane">
@@ -28,18 +28,12 @@
                     <inputSearch value="OwnerId" label="Owner" placeholder="Search People.."></inputSearch>
                 }
 
-                <inputTextBox value="Name" label="Thing D Name"></inputTextBox>
-                <inputTextBox value="Text"></inputTextBox>
-                <inputTextArea value="LongText"></inputTextArea>
-                <inputCheckBox value="Boolean"></inputCheckBox>
+                <inputTextBox value="Title" label="Project Title"></inputTextBox>
+                <inputTextArea value="Description"></inputTextArea>
             </div>
 
             <div class="col-12 col-md-6">
-                <inputDateBox value="DateTime" label="Date"></inputDateBox>
-                <inputTextBox value="Money" label="Money $"></inputTextBox>
-                <inputTextBox value="Integer"></inputTextBox>
-                <inputDropDown value="Lookup" items="@Lookup.ThingDLookups"></inputDropDown>
-                <inputDropDown value="Status" items="@Lookup.ThingDStatuses"></inputDropDown>
+                <inputDropDown value="Type" items="@Lookup.ProjectTypes"></inputDropDown>
             </div>
 
         </div>
