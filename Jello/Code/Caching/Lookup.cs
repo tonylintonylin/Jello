@@ -23,6 +23,8 @@ namespace Jello
 
         List<SelectListItem> ProjectTypes { get; }
         List<SelectListItem> IssueTypes { get; }
+        List<SelectListItem> IssuePriorities { get; }
+        List<SelectListItem> IssueStatuses { get; }
 
         List<SelectListItem> UserRoles { get; }
 
@@ -212,6 +214,35 @@ namespace Jello
             }
         }
 
+        public List<SelectListItem> IssuePriorities
+        {
+            get
+            {
+                var list = new List<SelectListItem>();
+                list.Add(new SelectListItem { Value = "", Text = "-- None --", Selected = true });
+                list.Add(new SelectListItem { Value = "Low", Text = "Low" });
+                list.Add(new SelectListItem { Value = "Medium", Text = "Medium" });
+                list.Add(new SelectListItem { Value = "High", Text = "High" });
+                list.Add(new SelectListItem { Value = "Urgent", Text = "Urgent" });
+
+                return list;
+            }
+        }
+
+        public List<SelectListItem> IssueStatuses
+        {
+            get
+            {
+                var list = new List<SelectListItem>();
+                list.Add(new SelectListItem { Value = "", Text = "-- None --", Selected = true });
+                list.Add(new SelectListItem { Value = "New", Text = "New" });
+                list.Add(new SelectListItem { Value = "In Progress", Text = "In Progress" });
+                list.Add(new SelectListItem { Value = "In Review", Text = "In Review" });
+                list.Add(new SelectListItem { Value = "Done", Text = "Done" });
+
+                return list;
+            }
+        }
         public List<SelectListItem> UserRoles
         {
             get
