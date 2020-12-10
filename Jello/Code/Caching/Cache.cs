@@ -56,6 +56,10 @@ namespace Jello
         void MergeProject(Project thingA);
         void DeleteProject(Project thingA);
 
+        void ClearIssues();
+        void MergeIssue(Issue thingA);
+        void DeleteIssue(Issue thingA);
+
         void ClearUsers();
         void MergeUser(User user);
         void DeleteUser(User user);
