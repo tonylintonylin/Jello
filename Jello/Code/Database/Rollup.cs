@@ -13,6 +13,9 @@ namespace Jello
         Task RollupAllAsync();
 
         Task RollupThingAAsync(int? id);
+
+        Task RollupProjectAsync(int? id);
+
         Task RollupThingBAsync(int? id);
         Task RollupThingCAsync(int? id);
         Task RollupThingDAsync(int? id);
@@ -134,6 +137,16 @@ namespace Jello
                             SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingA].OwnerId),
                                 ThingBName = (SELECT Name FROM [ThingB] WHERE [ThingB].Id = [ThingA].ThingBId),
                                 ThingCName = (SELECT Name FROM [ThingC] WHERE [ThingC].Id = [ThingA].ThingCId)
+                          WHERE Id = {id};");
+        }
+
+        public async Task RollupProjectAsync(int? id)
+        {
+            if (id == null) return;
+
+            await _db.Database.ExecuteSqlInterpolatedAsync(
+                      $@"UPDATE [Project] 
+                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId),
                           WHERE Id = {id};");
         }
 
