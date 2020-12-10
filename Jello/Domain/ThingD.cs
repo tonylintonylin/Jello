@@ -29,7 +29,7 @@ namespace Jello.Domain
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
 
-        // owner property was removed by scaffold
+        public virtual User Owner { get; set; }
         public virtual ICollection<ThingE> ThingE { get; set; }
     }
 }

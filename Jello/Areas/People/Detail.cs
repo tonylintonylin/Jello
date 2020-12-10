@@ -28,6 +28,9 @@ namespace Jello.Areas.People
         public int TotalThingsD { get; set; }
         public int TotalThingsE { get; set; }
 
+        public int TotalProjects { get; set; }
+        public int TotalIssues { get; set; }
+
         public string Role { get; set; }
 
         #endregion
