@@ -32,6 +32,7 @@
                 {
                     <inputSearch value="OwnerId" label="Assigner" placeholder="Search People.."></inputSearch>
                 }
+                <inputSearch value="AssigneeId" label="Assign to" placeholder="Search People.."></inputSearch>
                 <inputSearch value="ProjectId" label="Project Name" placeholder="Search Projects.."></inputSearch>
                 <inputDropDown value="Type" items="@Lookup.IssueTypes"></inputDropDown>
             </div>
@@ -59,6 +60,7 @@
 
             Dofactory.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
+            Dofactory.Utils.Typeahead.init("AssigneeId", @Html.Raw(Typeahead.Owners));
 
         });
 

@@ -19,7 +19,6 @@ namespace Jello.Areas.Issues
         public int? ProjectId { get; set; }
 
         public int? AssigneeId { get; set; }
-        public string AssigneeName { get; set; }
 
         public int? OwnerId { get; set; }
 
