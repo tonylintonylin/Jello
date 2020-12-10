@@ -15,6 +15,9 @@ namespace Jello.Areas.Admin
             Items.Add(new Detail { Icon = _cache.ThingCIcon, Name = "Things C", Url = "/thingsc", Count = await _db.ThingC.CountAsync() });
             Items.Add(new Detail { Icon = _cache.ThingDIcon, Name = "Things D", Url = "/thingsd", Count = await _db.ThingD.CountAsync() });
             Items.Add(new Detail { Icon = _cache.ThingEIcon, Name = "Things E", Url = "/thingse", Count = await _db.ThingE.CountAsync() });
+            
+            Items.Add(new Detail { Icon = _cache.ThingEIcon, Name = "Projects", Url = "/projects", Count = await _db.Project.CountAsync() });
+            Items.Add(new Detail { Icon = _cache.ThingEIcon, Name = "Issues", Url = "/issues", Count = await _db.Issue.CountAsync() });
 
             Items.Add(new Detail { Icon = _cache.PeopleIcon, Name = "People", Url = "/people", Count = await _db.User.CountAsync(u => u.IsDeleted == false) });
             Items.Add(new Detail { Icon = _cache.AdminIcon, Name = "Users", Url = "/admin/users", Count = await _db.User.CountAsync(u => u.IsDeleted == false) });

@@ -30,6 +30,9 @@ namespace Jello.Areas.Home
         public string PieChartValues { get; set; }
 
         public List<_ThingA> ThingsA { get; } = new List<_ThingA>();
+
+        public List<_Project> Projects { get; } = new List<_Project>();
+
         public List<_Viewed> Vieweds { get; } = new List<_Viewed>();
 
         #endregion
@@ -58,15 +61,20 @@ namespace Jello.Areas.Home
             // Recently viewed records
             var viewed = _db.Viewed.Where(v => v.UserId == _currentUser.Id)
                                    .OrderByDescending(v => v.ViewDate)
-                                   .Take(6);
+                                   .Take(9);
 
             _mapper.Map(viewed, Vieweds);
 
             // Top Things A
-            var thingsA = await _db.ThingA.OrderByDescending(o => o.Money)
-                                            .Take(5).ToListAsync();
+            // var thingsA = await _db.ThingA.OrderByDescending(o => o.Money)
+            //                                 .Take(5).ToListAsync();
 
-            _mapper.Map(thingsA, ThingsA);
+            // _mapper.Map(thingsA, ThingsA);
+
+            var projects = await _db.Project.OrderByDescending(o => o.TotalIssues)
+                                            .Take(7).ToListAsync();
+
+            _mapper.Map(projects, Projects);
 
             return View(this);
         }
@@ -87,6 +95,9 @@ namespace Jello.Areas.Home
                 CreateMap<ThingA, _ThingA>()
                     .Map(dest => dest.Money, opt => opt.MapFrom(src => src.Money.ToCurrency()))
                     .Map(dest => dest.DateTime, opt => opt.MapFrom(src => src.DateTime.ToDate()));
+
+                CreateMap<Project, _Project>()
+                    .Map(dest => dest.TotalIssues, opt => opt.MapFrom(src => src.TotalIssues));
             }
         }
 
