@@ -443,3 +443,4 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\Detail.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\_Related\_Issue.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Projects\Edit.cshtml.g.cs
+C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Areas\Issues\List.cshtml.g.cs
