@@ -11,12 +11,16 @@ namespace Jello.Domain
         public string Type { get; set; }
         public string Priority { get; set; }
         public string Status { get; set; }
+
         public int? ProjectId { get; set; }
         public string ProjectTitle { get; set; }
+
         public int? AssigneeId { get; set; }
         public string AssigneeName { get; set; }
+
         public int OwnerId { get; set; }
         public string OwnerAlias { get; set; }
+        
         public DateTime CreatedDate { get; set; }
         public DateTime CreatedOn { get; set; }
         public int? CreatedBy { get; set; }
