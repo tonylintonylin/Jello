@@ -27,6 +27,9 @@ namespace Jello.Areas.Users
         public int TotalThingsC { get; set; }
         public int TotalThingsD { get; set; }
         public int TotalThingsE { get; set; }
+        
+        public int TotalProjects { get; set; }
+        public int TotalIssues { get; set; }
 
         public string ActivationCode { get; set; }
         public string ActivationDate { get; set; }

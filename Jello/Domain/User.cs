@@ -13,6 +13,10 @@ namespace Jello.Domain
             ThingB = new HashSet<ThingB>();
             ThingC = new HashSet<ThingC>();
             ThingE = new HashSet<ThingE>();
+
+            Project = new HashSet<Project>();
+            Issue = new HashSet<Issue>();
+
             Viewed = new HashSet<Viewed>();
         }
 
@@ -31,6 +35,10 @@ namespace Jello.Domain
         public int TotalThingsC { get; set; }
         public int TotalThingsD { get; set; }
         public int TotalThingsE { get; set; }
+        
+        public int TotalProjects { get; set; }
+        public int TotalIssues { get; set; }
+
         public string Role { get; set; }
         public string IdentityId { get; set; }
         public string IdentityName { get; set; }
@@ -55,6 +63,10 @@ namespace Jello.Domain
         public virtual ICollection<ThingB> ThingB { get; set; }
         public virtual ICollection<ThingC> ThingC { get; set; }
         public virtual ICollection<ThingE> ThingE { get; set; }
+
+        public virtual ICollection<Project> Project { get; set; }
+        public virtual ICollection<Issue> Issue { get; set; }
+
         public virtual ICollection<Viewed> Viewed { get; set; }
     }
 }
