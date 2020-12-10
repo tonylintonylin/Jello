@@ -31,14 +31,14 @@ namespace Jello.Areas.Projects
 
         #region Secondary Methods
 
-        // [HttpGet("import")]  // Step 1
-        // public IActionResult Import() => new Import().Get();
+        [HttpGet("import")]  // Step 1
+        public IActionResult Import() => new Import().Get();
 
-        // [HttpPost("import")]  // Step 2
-        // public async Task<IActionResult> Import(IFormFile file) => await new Import { FormFile = file }.Upload();
+        [HttpPost("import")]  // Step 2
+        public async Task<IActionResult> Import(IFormFile file) => await new Import { FormFile = file }.Upload();
 
-        // [HttpPost("import/go")]   // Step 3
-        // public async Task<IActionResult> Import(Import model) => await model.PostAsync();
+        [HttpPost("import/go")]   // Step 3
+        public async Task<IActionResult> Import(Import model) => await model.PostAsync();
 
         // [HttpGet("export")]
         // public async Task<IActionResult> Export(Export model) => await model.GetAsync();
