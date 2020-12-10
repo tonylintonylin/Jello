@@ -59,17 +59,17 @@
             <div class="row mt-10 mb-15">
 
                 <div class="col-4">
-                    <inputSearch value="OwnerId" label="Owner Name" placeholder="Search Assigners.."></inputSearch>
+                    <inputSearch value="OwnerId" label="Assigner" placeholder="Search Assigners.."></inputSearch>
                 </div>
 
                 <div class="col-4">
-                    <inputSearch value="AssigneeId" label="Assignee Name" placeholder="Search Assignees.."></inputSearch>
+                    <inputSearch value="AssigneeId" label="Assignee" placeholder="Search Assignees.."></inputSearch>
                 </div>
 
                 <div class="col-4">
                     <div class="pt-5">
                         <button class="btn btn-light btn-sm js-filter" type="submit"> Filter </button>&nbsp;
-                        <a href="/projects?AdvancedFilter=True" class="btn btn-light btn-sm"> Reset </a>
+                        <a href="/issues?AdvancedFilter=True" class="btn btn-light btn-sm"> Reset </a>
                     </div>
                 </div>
             </div>
@@ -137,6 +137,7 @@
             
             Dofactory.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
+            Dofactory.Utils.Typeahead.init("AssigneeId", @Html.Raw(Typeahead.Owners));
 
         });
 

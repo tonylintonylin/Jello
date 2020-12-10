@@ -10,7 +10,8 @@
         }
     </div>
 
-    <div class="ml-auto related-new"><a class="btn btn-sm btn-light" href="/issues/edit?@(Model.ParentIdName)Id=@(Model.ParentId)&@(Model.ParentIdName)Name=@(Model.ParentName)"> New </a></div>
+    @* <div class="ml-auto related-new"><a class="btn btn-sm btn-light" href="/issues/edit?@(Model.ParentIdName)Id=@(Model.ParentId)&@(Model.ParentIdName)Title=@(Model.ParentName)"> New </a></div> *@
+    <div class="ml-auto related-new"><a class="btn btn-sm btn-light" href="/issues/edit?@(Model.ParentIdName)=@(Model.ParentId)"> New </a></div>
 </div>
 
 <div class="related-items">
