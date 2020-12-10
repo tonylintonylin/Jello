@@ -353,24 +353,6 @@ namespace Jello
             }
         }
 
-        public void MergeProject(Project Project)
-        {
-            lock (mocker)
-            {
-                if (Project != null)
-                    Projects[Project.Id] = Project;
-            }
-        }
-
-        public void DeleteProject(Project Project)
-        {
-            lock (mocker)
-            {
-                if (Project != null)
-                    Projects.Remove(Project.Id);
-            }
-        }
-
         #endregion
 
         #region ThingEs
@@ -419,6 +401,57 @@ namespace Jello
             {
                 if (ThingE != null)
                     ThingsE.Remove(ThingE.Id);
+            }
+        }
+
+        #endregion
+
+        #region Projects
+
+        public Dictionary<int, Project> Projects
+        {
+            get
+            {
+                // ** Lazy load pattern 
+
+                if (!(_memoryCache.Get(ProjectsKey) is Dictionary<int, Project> dictionary))
+                {
+                    lock (locker)
+                    {
+                        dictionary = _db.Project.ToDictionary(c => c.Id);
+                        Add(ProjectsKey, dictionary, DateTime.Now.AddHours(4));
+                    }
+                }
+
+                return dictionary;
+            }
+        }
+
+        // Clear Project cache
+
+        public void ClearProjects()
+        {
+            lock (locker)
+            {
+                Clear(ProjectsKey);
+            }
+        }
+
+        public void MergeProject(Project Project)
+        {
+            lock (mocker)
+            {
+                if (Project != null)
+                    Projects[Project.Id] = Project;
+            }
+        }
+
+        public void DeleteProject(Project Project)
+        {
+            lock (mocker)
+            {
+                if (Project != null)
+                    Projects.Remove(Project.Id);
             }
         }
 
