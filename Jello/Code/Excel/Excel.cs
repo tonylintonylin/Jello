@@ -39,7 +39,7 @@ namespace Jello
         Task<(int, int)> ImportThingsEAsync(string fileName);
 
         Task<(int, int)> ImportProjectsAsync(string fileName);
-        // Task<(int, int)> ImportIssuesAsync(string fileName);
+        Task<(int, int)> ImportIssuesAsync(string fileName);
     }
     #endregion
 
@@ -857,6 +857,47 @@ namespace Jello
 
             return (count, grid.Rows.Count);
         }
+
+        public async Task<(int, int)> ImportIssuesAsync(string fileName)
+        {
+            int count = 0;
+            var grid = ReadToGrid(fileName);
+            foreach (var row in grid.Rows)
+            {
+                try
+                {
+                    var issue = new Issue { CreatedOn = DateTime.Now, ChangedOn = DateTime.Now, CreatedDate = DateTime.Now, CreatedBy = _currentUser.Id, OwnerId = _currentUser.Id, OwnerAlias = _cache.Users[_currentUser.Id].Alias };
+                    issue.Title = row["Title"];
+                    if (row.ContainsKey("Description") && row["Description"] != null) issue.Description = row["Description"];
+                    if (row.ContainsKey("Type") && row["Type"] != null) issue.Type = row["Type"];
+                    if (row.ContainsKey("Status") && row["Status"] != null) issue.Type = row["Status"];
+                    if (row.ContainsKey("Priority") && row["Priority"] != null) issue.Type = row["Priority"];
+                    if (row.ContainsKey("ProjectId") && row["ProjectId"] != null) issue.Type = row["ProjectId"];
+                    if (row.ContainsKey("ProjectTitle") && row["ProjectTitle"] != null) issue.Type = row["ProjectTitle"];
+                    if (row.ContainsKey("AssigneeId") && row["AssigneeId"] != null) issue.Type = row["AssigneeId"];
+                    if (row.ContainsKey("AssigneeName") && row["AssigneeName"] != null) issue.Type = row["AssigneeName"];
+
+                    _db.Issue.Add(issue);
+                    await _db.SaveChangesAsync();
+
+                    count++;
+                }
+                catch
+                {
+                    // No logging here. Just one import row less (for now)
+                }
+            }
+
+            // temp file can be deleted
+
+            var filePath = Qualify(fileName);
+            File.Delete(filePath);
+
+            if (count == 0) throw new ImportException("No records were loaded. Please try again", null);
+
+            return (count, grid.Rows.Count);
+        }
+
         #endregion
 
         #region Helpers
