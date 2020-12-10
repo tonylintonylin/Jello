@@ -72,5 +72,18 @@ namespace Jello.Areas._Related
             }
         }
 
+        public void Prepare(List<Issue> issues, _Issues model, int totalIssues, int parentId, string parentName)
+        {
+            model.TotalIssues = totalIssues;
+            model.ParentId = parentId;
+            model.ParentName = parentName;
+
+            foreach (var issue in issues)
+            {
+                var _issue = new _Issue { Id = issue.Id, Title = issue.Title };
+                model.Issues.Add(_issue);
+            }
+        }
+
     }
 }
