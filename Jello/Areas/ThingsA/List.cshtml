@@ -13,9 +13,9 @@
     <div class="page-box">
 
         <div class="d-flex">
-            <div class="page-box-icon">
+            @* <div class="page-box-icon">
                 <a href="/thingsa"><i class="@Cache.ThingAIcon"></i></a> Things A
-            </div>
+            </div> *@
             <div class="ml-auto page-box-new-button-top">
                 <a class="btn btn-sm btn-light" href="/thingsa/edit"> New </a>&nbsp;
                 <a class="btn btn-sm btn-light" data-toggle="tooltip" title="Import from Excel" href="/thingsa/import">Import</a>&nbsp;
@@ -127,9 +127,9 @@
     <script>
 
         $(function () {
-
+@* 
             Dofactory.Utils.Typeahead.init("ThingBId", @Html.Raw(Typeahead.ThingsB));
-            Dofactory.Utils.Typeahead.init("ThingCId", @Html.Raw(Typeahead.ThingsC));
+            Dofactory.Utils.Typeahead.init("ThingCId", @Html.Raw(Typeahead.ThingsC)); *@
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
 
         });

@@ -10,13 +10,14 @@ namespace Jello
 
     public interface ITypeahead
     {
-        string ThingsA { get; }
-        string ThingsB { get; }
-        string ThingsC { get; }
-        string ThingsD { get; }
-        string ThingsE { get; }
+        // string ThingsA { get; }
+        // string ThingsB { get; }
+        // string ThingsC { get; }
+        // string ThingsD { get; }
+        // string ThingsE { get; }
 
         string Projects { get; }
+        string Issues { get; }
 
         string Owners { get; }
     }
@@ -37,17 +38,17 @@ namespace Jello
 
         #region Items
 
-        public string ThingsA
-        {
-            get
-            {
-                var list = new List<TypeaheadItem>();
-                foreach (var thingA in _cache.ThingsA.Values)
-                    list.Add(new TypeaheadItem { id = thingA.Id, name = thingA.Name, icon = _cache.ThingAIcon, type = "ThingA" });
+        // public string ThingsA
+        // {
+        //     get
+        //     {
+        //         var list = new List<TypeaheadItem>();
+        //         foreach (var thingA in _cache.ThingsA.Values)
+        //             list.Add(new TypeaheadItem { id = thingA.Id, name = thingA.Name, icon = _cache.ThingAIcon, type = "ThingA" });
 
-                return JsonConvert.SerializeObject(list);
-            }
-        }
+        //         return JsonConvert.SerializeObject(list);
+        //     }
+        // }
 
         public string Projects
         {
@@ -61,54 +62,66 @@ namespace Jello
             }
         }
 
-        public string ThingsB
+        public string Issues
         {
             get
             {
                 var list = new List<TypeaheadItem>();
-                foreach (var thingB in _cache.ThingsB.Values)
-                    list.Add(new TypeaheadItem { id = thingB.Id, name = thingB.Name, icon = _cache.ThingBIcon, type = "ThingB" });
+                foreach (var issue in _cache.Issues.Values)
+                    list.Add(new TypeaheadItem { id = issue.Id, name = issue.Title, icon = _cache.IssueIcon, type = "Issue" });
 
                 return JsonConvert.SerializeObject(list);
             }
         }
 
-        public string ThingsC
-        {
-            get
-            {
-                var list = new List<TypeaheadItem>();
-                foreach (var thingC in _cache.ThingsC.Values)
-                    list.Add(new TypeaheadItem { id = thingC.Id, name = thingC.Name, icon = _cache.ThingCIcon, type = "ThingC" });
+        // public string ThingsB
+        // {
+        //     get
+        //     {
+        //         var list = new List<TypeaheadItem>();
+        //         foreach (var thingB in _cache.ThingsB.Values)
+        //             list.Add(new TypeaheadItem { id = thingB.Id, name = thingB.Name, icon = _cache.ThingBIcon, type = "ThingB" });
 
-                return JsonConvert.SerializeObject(list);
-            }
-        }
+        //         return JsonConvert.SerializeObject(list);
+        //     }
+        // }
 
-        public string ThingsD
-        {
-            get
-            {
-                var list = new List<TypeaheadItem>();
-                foreach (var thingD in _cache.ThingsD.Values)
-                    list.Add(new TypeaheadItem { id = thingD.Id, name = thingD.Name,
-                                                 icon = _cache.ThingDIcon, type = "ThingD" });
+        // public string ThingsC
+        // {
+        //     get
+        //     {
+        //         var list = new List<TypeaheadItem>();
+        //         foreach (var thingC in _cache.ThingsC.Values)
+        //             list.Add(new TypeaheadItem { id = thingC.Id, name = thingC.Name, icon = _cache.ThingCIcon, type = "ThingC" });
 
-                return JsonConvert.SerializeObject(list);
-            }
-        }
+        //         return JsonConvert.SerializeObject(list);
+        //     }
+        // }
 
-        public string ThingsE
-        {
-            get
-            {
-                var list = new List<TypeaheadItem>();
-                foreach (var thingE in _cache.ThingsE.Values)
-                    list.Add(new TypeaheadItem { id = thingE.Id, name = thingE.Name, icon = _cache.ThingEIcon, type = "ThingE" });
+        // public string ThingsD
+        // {
+        //     get
+        //     {
+        //         var list = new List<TypeaheadItem>();
+        //         foreach (var thingD in _cache.ThingsD.Values)
+        //             list.Add(new TypeaheadItem { id = thingD.Id, name = thingD.Name,
+        //                                          icon = _cache.ThingDIcon, type = "ThingD" });
 
-                return JsonConvert.SerializeObject(list);
-            }
-        }
+        //         return JsonConvert.SerializeObject(list);
+        //     }
+        // }
+
+        // public string ThingsE
+        // {
+        //     get
+        //     {
+        //         var list = new List<TypeaheadItem>();
+        //         foreach (var thingE in _cache.ThingsE.Values)
+        //             list.Add(new TypeaheadItem { id = thingE.Id, name = thingE.Name, icon = _cache.ThingEIcon, type = "ThingE" });
+
+        //         return JsonConvert.SerializeObject(list);
+        //     }
+        // }
 
         public string Owners
         {

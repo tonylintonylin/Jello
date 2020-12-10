@@ -12,11 +12,11 @@ namespace Jello
     {
         Dictionary<string, MetaType> MetaTypes { get; }
 
-        string ThingAIcon { get; }
-        string ThingBIcon { get; }
-        string ThingCIcon { get; }
-        string ThingDIcon { get; }
-        string ThingEIcon { get; }
+        // string ThingAIcon { get; }
+        // string ThingBIcon { get; }
+        // string ThingCIcon { get; }
+        // string ThingDIcon { get; }
+        // string ThingEIcon { get; }
 
         string ProjectIcon { get; }
         string IssueIcon { get; }

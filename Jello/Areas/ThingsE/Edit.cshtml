@@ -9,10 +9,10 @@
     <input type="hidden" asp-for="Id" />
     <input type="hidden" asp-for="Referer" />
 
-    <div class="page-box">
+    @* <div class="page-box">
         <div class="page-box-icon"><a href="/thingse"><i class="@Cache.ThingEIcon"></i></a> Thing E</div>
         <div class="page-box-name">@title</div>
-    </div>
+    </div> *@
 
     <div class="edit-pane">
         <div class="row edit-pane-row ">
@@ -66,8 +66,8 @@
         $(function () {
 
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
-            Dofactory.Utils.Typeahead.init("ThingAId", @Html.Raw(Typeahead.ThingsA));
-            Dofactory.Utils.Typeahead.init("ThingDId", @Html.Raw(Typeahead.ThingsD));
+            @* Dofactory.Utils.Typeahead.init("ThingAId", @Html.Raw(Typeahead.ThingsA));
+            Dofactory.Utils.Typeahead.init("ThingDId", @Html.Raw(Typeahead.ThingsD)); *@
         });
 
     </script>
