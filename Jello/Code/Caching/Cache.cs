@@ -11,13 +11,7 @@ namespace Jello
     public interface ICache
     {
         Dictionary<string, MetaType> MetaTypes { get; }
-
-        // string ThingAIcon { get; }
-        // string ThingBIcon { get; }
-        // string ThingCIcon { get; }
-        // string ThingDIcon { get; }
-        // string ThingEIcon { get; }
-
+        
         string ProjectIcon { get; }
         string IssueIcon { get; }
 
@@ -126,16 +120,12 @@ namespace Jello
                     lock (locker)
                     {
                         dictionary = new Dictionary<string, MetaType>();
-                        // dictionary.Add("ThingA", new MetaType { Name = "ThingA", Icon = "icon-star icon-square icon-thinga", Url="/thingsa" });
-                        // dictionary.Add("ThingB", new MetaType { Name = "ThingB", Icon = "icon-user icon-square icon-thingb", Url="/thingsb" });
-                        // dictionary.Add("ThingC", new MetaType { Name = "ThingC", Icon = "icon-calendar icon-square icon-thingc", Url="/thingsc" });
-                        // dictionary.Add("ThingD", new MetaType { Name = "ThingD", Icon = "icon-globe icon-square icon-thingd", Url="/thingsd" });
-                        // dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
 
                         dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-folder icon-square icon-project", Url= "/projects" });
                         dictionary.Add("Issue", new MetaType { Name = "Issue", Icon = "icon-pin icon-square icon-issue", Url= "/issues" });
 
                         dictionary.Add("People", new MetaType { Name = "People", Icon = "icon-people icon-square icon-persons", Url = "/people" });
+
                         dictionary.Add("Admin", new MetaType { Name = "Admin", Icon = "icon-settings icon-square icon-admin", Url = "/admin" });
                         dictionary.Add("Owner", new MetaType { Name = "Owner", Icon = "icon-user icon-square icon-owner", Url = "/people" });
                         dictionary.Add("User", new MetaType { Name = "User", Icon = "icon-user icon-square icon-owner", Url = "/admin/users" });
@@ -147,13 +137,8 @@ namespace Jello
                 return dictionary;
             }
         }
-        // public string ThingAIcon { get { return MetaTypes["ThingA"].Icon; } }
-        // public string ThingBIcon { get { return MetaTypes["ThingB"].Icon; } }
-        // public string ThingCIcon { get { return MetaTypes["ThingC"].Icon; } }
-        // public string ThingDIcon { get { return MetaTypes["ThingD"].Icon; } }
-        // public string ThingEIcon { get { return MetaTypes["ThingE"].Icon; } }
 
-        public string ProjectIcon { get { return MetaTypes["People"].Icon; } }
+        public string ProjectIcon { get { return MetaTypes["Project"].Icon; } }
         public string IssueIcon { get { return MetaTypes["Issue"].Icon; } }
         
         public string AdminIcon { get { return MetaTypes["Admin"].Icon; } }

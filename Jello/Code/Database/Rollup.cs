@@ -173,7 +173,8 @@ namespace Jello
 
             await _db.Database.ExecuteSqlInterpolatedAsync(
                       $@"UPDATE [Project] 
-                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId)
+                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId),
+                                TotalIssues = (SELECT COUNT(Issue.Id) FROM [Issue] WHERE [Issue].ProjectId = [Project].Id)
                           WHERE Id = {id};");
         }
 
