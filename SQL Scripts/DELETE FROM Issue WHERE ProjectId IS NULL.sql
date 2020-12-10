@@ -1,0 +1,1 @@
+DELETE FROM Issue WHERE ProjectId IS NULL;

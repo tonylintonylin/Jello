@@ -12,7 +12,7 @@ namespace Jello.Domain
         public string Status { get; set; }
         public string Priority { get; set; }
 
-        public int? ProjectId { get; set; }
+        public int ProjectId { get; set; }
         public string ProjectTitle { get; set; }
 
         public int? AssigneeId { get; set; }
