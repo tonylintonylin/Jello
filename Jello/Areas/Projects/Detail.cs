@@ -3,6 +3,7 @@ using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jello.Areas.Projects
@@ -37,10 +38,13 @@ namespace Jello.Areas.Projects
 
         public override async Task<IActionResult> GetAsync()
         {
-            var Project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
-            _mapper.Map(Project, this);
+            var project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
+            _mapper.Map(project, this);
             
-            await _viewedService.Log(Id, "Project", Project.Title);
+            var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(4).ToListAsync();
+            _related.Prepare(issues, Issues, project.TotalIssues, project.Id, project.Title);
+            
+            await _viewedService.Log(Id, "Project", project.Title);
 
             return View(this);
         }
