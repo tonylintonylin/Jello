@@ -17,6 +17,7 @@ namespace Jello
         string ThingCIcon { get; }
         string ThingDIcon { get; }
         string ThingEIcon { get; }
+        string ProjectIcon { get; }
         string AdminIcon { get; }
         string UserIcon { get; }
         string PeopleIcon { get; }
@@ -26,6 +27,9 @@ namespace Jello
         Dictionary<int, ThingC> ThingsC { get; }
         Dictionary<int, ThingD> ThingsD { get; }
         Dictionary<int, ThingE> ThingsE { get; }
+
+        Dictionary<int, ThingD> Projects { get; }
+
         Dictionary<int, User> Users { get; }
 
         void ClearThingsA();
@@ -47,6 +51,10 @@ namespace Jello
         void ClearThingsE();
         void MergeThingE(ThingE thingA);
         void DeleteThingE(ThingE thingA);
+
+        void ClearProjects();
+        void MergeProject(Project thingA);
+        void DeleteProject(Project thingA);
 
         void ClearUsers();
         void MergeUser(User user);
@@ -84,6 +92,9 @@ namespace Jello
         private const string ThingsCKey = nameof(ThingsCKey);
         private const string ThingsDKey = nameof(ThingsDKey);
         private const string ThingsEKey = nameof(ThingsEKey);
+
+        private const string ProjectsKey = nameof(ProjectsKey);
+
         private const string UsersKey = nameof(UsersKey);
         private const string MetaTypesKey = nameof(MetaTypesKey);
 
@@ -111,6 +122,9 @@ namespace Jello
                         dictionary.Add("ThingC", new MetaType { Name = "ThingC", Icon = "icon-calendar icon-square icon-thingc", Url="/thingsc" });
                         dictionary.Add("ThingD", new MetaType { Name = "ThingD", Icon = "icon-globe icon-square icon-thingd", Url="/thingsd" });
                         dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
+
+                        dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-people icon-square icon-thinge", Url= "/projects" });
+
                         dictionary.Add("People", new MetaType { Name = "People", Icon = "icon-emotsmile icon-square icon-persons", Url = "/people" });
                         dictionary.Add("Admin", new MetaType { Name = "Admin", Icon = "icon-settings icon-square icon-admin", Url = "/admin" });
                         dictionary.Add("Owner", new MetaType { Name = "Owner", Icon = "icon-user icon-square icon-owner", Url = "/people" });
@@ -128,6 +142,9 @@ namespace Jello
         public string ThingCIcon { get { return MetaTypes["ThingC"].Icon; } }
         public string ThingDIcon { get { return MetaTypes["ThingD"].Icon; } }
         public string ThingEIcon { get { return MetaTypes["ThingE"].Icon; } }
+
+        public string ProjectIcon { get { return MetaTypes["ThingE"].Icon; } }
+        
         public string AdminIcon { get { return MetaTypes["Admin"].Icon; } }
         public string UserIcon { get { return MetaTypes["User"].Icon; } }
         public string PeopleIcon { get { return MetaTypes["People"].Icon; } }
@@ -333,6 +350,24 @@ namespace Jello
             {
                 if (ThingD != null)
                     ThingsD.Remove(ThingD.Id);
+            }
+        }
+
+        public void MergeProject(Project Project)
+        {
+            lock (mocker)
+            {
+                if (Project != null)
+                    Projects[Project.Id] = Project;
+            }
+        }
+
+        public void DeleteProject(Project Project)
+        {
+            lock (mocker)
+            {
+                if (Project != null)
+                    Projects.Remove(Project.Id);
             }
         }
 
