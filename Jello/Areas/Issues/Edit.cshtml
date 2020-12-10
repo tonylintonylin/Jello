@@ -57,6 +57,7 @@
 
         $(function () {
 
+            Dofactory.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
             Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
 
         });
