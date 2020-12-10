@@ -80,8 +80,10 @@
                 <th class="width-50">&nbsp;</th>
                 <th><a sort="Title">Issue Title</a></th>
                 <th><a sort="Type">Type</a></th>
-                <th><a sort="AssigneeName">Issue Assigned To</a></th>
+                <th><a sort="Status">Status</a></th>
+                <th><a sort="Priority">Priority</a></th>
                 <th><a sort="OwnerAlias">Issue Assigner</a></th>
+                <th><a sort="AssigneeName">Issue Assigned To</a></th>
                 <th><a sort="CreatedDate">Date Created</a></th>
                 <th>&nbsp;</th>
             </tr>
@@ -97,7 +99,10 @@
                     <td class="text-center">@(index++)</td>
                     <td><a class="table-list-link" href="/issues/@item.Id?tab=details">@item.Title</a></td>
                     <td>@item.Type</td>
+                    <td>@item.Status</td>
+                    <td>@item.Priority</td>
                     <td><a class="table-list-link" href="/people/@item.OwnerId">@item.OwnerAlias</a></td>
+                    <td><a class="table-list-link" href="/people/@item.AssigneeId">@item.AssigneeName</a></td>
                     <td>@item.CreatedDate</td>
                     <td class='text-right'>
                         <a class="btn btn-xs btn-light" href="/issues/edit/@item.Id">Edit</a>&nbsp;

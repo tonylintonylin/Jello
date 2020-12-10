@@ -15,6 +15,11 @@ namespace Jello.Areas.Issues
         public string Title { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
+        public string Priority { get; set; }
+        public string Status { get; set; }
+
+        public int? AssigneeId { get; set; }
+        public string AssigneeName { get; set; }
 
         public int? OwnerId { get; set; }
         public string OwnerAlias { get; set; }
