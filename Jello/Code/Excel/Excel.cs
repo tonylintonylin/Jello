@@ -26,7 +26,7 @@ namespace Jello
         byte[] ExportThingsE(List<ThingE> thingsE);
 
         byte[] ExportProjects(List<Project> projects);
-        // byte[] ExportIssues(List<ThingE> issues);
+        byte[] ExportIssues(List<Issue> issues);
 
         byte[] ExportPeople(List<User> users);
 
@@ -495,6 +495,72 @@ namespace Jello
                         CreateCell(project.OwnerId.CleanNumber(), CellValues.String),
                         CreateCell(project.OwnerAlias, CellValues.String),
                         CreateCell(project.TotalIssues.CleanNumber(), CellValues.Number));
+
+                    sheetData.AppendChild(row);
+                }
+
+                worksheetPart.Worksheet.Save();
+                document.Close();
+            }
+
+            stream.Position = 0;
+            return stream.ToArray();
+        }
+
+        public byte[] ExportIssues(List<Issue> issues)
+        {
+            var stream = new MemoryStream();
+
+            using (var document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+            {
+                var workbookPart = document.AddWorkbookPart();
+                workbookPart.Workbook = new Workbook();
+
+                var worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
+                worksheetPart.Worksheet = new Worksheet();
+
+                var sheets = workbookPart.Workbook.AppendChild(new Sheets());
+                var sheet = new Sheet() { Id = workbookPart.GetIdOfPart(worksheetPart), SheetId = 1, Name = "Sheet1" };
+                sheets.Append(sheet);
+
+                workbookPart.Workbook.Save();
+
+                var sheetData = worksheetPart.Worksheet.AppendChild(new SheetData());
+
+                // Constructing header
+                var row = new Row();
+
+                row.Append(
+                    CreateCell("Id", CellValues.String),
+                    CreateCell("Title", CellValues.String),
+                    CreateCell("Description", CellValues.String),
+                    CreateCell("Type", CellValues.String),
+                    CreateCell("Status", CellValues.String),
+                    CreateCell("Priority", CellValues.String),
+                    CreateCell("OwnerAlias", CellValues.String),
+                    CreateCell("AssigneeName", CellValues.String),
+                    CreateCell("CreatedDate", CellValues.String),
+                    CreateCell("OwnerId", CellValues.String),
+                    CreateCell("OwnerAlias", CellValues.String));
+
+                sheetData.AppendChild(row);
+
+                foreach (var issue in issues)
+                {
+                    row = new Row();
+
+                    row.Append(
+                        CreateCell(issue.Id.CleanNumber(), CellValues.Number),
+                        CreateCell(issue.Title, CellValues.String),
+                        CreateCell(issue.Description, CellValues.String),
+                        CreateCell(issue.Type, CellValues.String),
+                        CreateCell(issue.Status, CellValues.String),
+                        CreateCell(issue.Priority, CellValues.String),
+                        CreateCell(issue.OwnerAlias, CellValues.String),
+                        CreateCell(issue.AssigneeName, CellValues.String),
+                        CreateCell(issue.CreatedDate.ToDate(), CellValues.String),
+                        CreateCell(issue.OwnerId.CleanNumber(), CellValues.String),
+                        CreateCell(issue.OwnerAlias, CellValues.String));
 
                     sheetData.AppendChild(row);
                 }

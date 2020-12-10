@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace Jello.Areas.Projects
+namespace Jello.Areas.Issues
 {
     public class Export : List
     {
@@ -19,8 +19,8 @@ namespace Jello.Areas.Projects
         {
             var query = BuildQuery();
 
-            Bytes = _excel.ExportProjects(await query.ToListAsync());
-            FileName = "ExcelExportedProjects-" + System.DateTime.Now.ToFileStampDateTime() + ".xlsx";
+            Bytes = _excel.ExportIssues(await query.ToListAsync());
+            FileName = "ExcelExportedIssues-" + System.DateTime.Now.ToFileStampDateTime() + ".xlsx";
 
             return File(Bytes, "application/vnd.ms-excel", FileName);
         }
