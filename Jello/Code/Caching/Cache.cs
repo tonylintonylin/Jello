@@ -94,6 +94,7 @@ namespace Jello
         private const string ThingsEKey = nameof(ThingsEKey);
 
         private const string ProjectsKey = nameof(ProjectsKey);
+        private const string IssuesKey = nameof(IssuesKey);
 
         private const string UsersKey = nameof(UsersKey);
         private const string MetaTypesKey = nameof(MetaTypesKey);
@@ -124,6 +125,7 @@ namespace Jello
                         dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
 
                         dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-people icon-square icon-thinge", Url= "/projects" });
+                        dictionary.Add("Issue", new MetaType { Name = "Issue", Icon = "icon-people icon-square icon-thinge", Url= "/issues" });
 
                         dictionary.Add("People", new MetaType { Name = "People", Icon = "icon-emotsmile icon-square icon-persons", Url = "/people" });
                         dictionary.Add("Admin", new MetaType { Name = "Admin", Icon = "icon-settings icon-square icon-admin", Url = "/admin" });
@@ -144,6 +146,7 @@ namespace Jello
         public string ThingEIcon { get { return MetaTypes["ThingE"].Icon; } }
 
         public string ProjectIcon { get { return MetaTypes["ThingE"].Icon; } }
+        public string IssueIcon { get { return MetaTypes["ThingE"].Icon; } }
         
         public string AdminIcon { get { return MetaTypes["Admin"].Icon; } }
         public string UserIcon { get { return MetaTypes["User"].Icon; } }
@@ -452,6 +455,57 @@ namespace Jello
             {
                 if (Project != null)
                     Projects.Remove(Project.Id);
+            }
+        }
+
+        #endregion
+
+        #region Issues
+
+        public Dictionary<int, Issue> Issues
+        {
+            get
+            {
+                // ** Lazy load pattern 
+
+                if (!(_memoryCache.Get(IssuesKey) is Dictionary<int, Issue> dictionary))
+                {
+                    lock (locker)
+                    {
+                        dictionary = _db.Issue.ToDictionary(c => c.Id);
+                        Add(IssuesKey, dictionary, DateTime.Now.AddHours(4));
+                    }
+                }
+
+                return dictionary;
+            }
+        }
+
+        // Clear Issue cache
+
+        public void ClearIssues()
+        {
+            lock (locker)
+            {
+                Clear(IssuesKey);
+            }
+        }
+
+        public void MergeIssue(Issue Issue)
+        {
+            lock (mocker)
+            {
+                if (Issue != null)
+                    Issues[Issue.Id] = Issue;
+            }
+        }
+
+        public void DeleteIssue(Issue Issue)
+        {
+            lock (mocker)
+            {
+                if (Issue != null)
+                    Issues.Remove(Issue.Id);
             }
         }
 

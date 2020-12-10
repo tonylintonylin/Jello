@@ -31,7 +31,7 @@ namespace Jello.Areas.Issues
         public DateTime ChangedOn { get; set; }
         public int? ChangedBy { get; set; }
 
-        // Related Lists
+        // Related Lists (none)
         public string Tab { get; set; } = "details";
 
         #endregion
