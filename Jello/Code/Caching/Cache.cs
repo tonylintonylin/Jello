@@ -126,11 +126,11 @@ namespace Jello
                     lock (locker)
                     {
                         dictionary = new Dictionary<string, MetaType>();
-                        dictionary.Add("ThingA", new MetaType { Name = "ThingA", Icon = "icon-star icon-square icon-thinga", Url="/thingsa" });
-                        dictionary.Add("ThingB", new MetaType { Name = "ThingB", Icon = "icon-user icon-square icon-thingb", Url="/thingsb" });
-                        dictionary.Add("ThingC", new MetaType { Name = "ThingC", Icon = "icon-calendar icon-square icon-thingc", Url="/thingsc" });
-                        dictionary.Add("ThingD", new MetaType { Name = "ThingD", Icon = "icon-globe icon-square icon-thingd", Url="/thingsd" });
-                        dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
+                        // dictionary.Add("ThingA", new MetaType { Name = "ThingA", Icon = "icon-star icon-square icon-thinga", Url="/thingsa" });
+                        // dictionary.Add("ThingB", new MetaType { Name = "ThingB", Icon = "icon-user icon-square icon-thingb", Url="/thingsb" });
+                        // dictionary.Add("ThingC", new MetaType { Name = "ThingC", Icon = "icon-calendar icon-square icon-thingc", Url="/thingsc" });
+                        // dictionary.Add("ThingD", new MetaType { Name = "ThingD", Icon = "icon-globe icon-square icon-thingd", Url="/thingsd" });
+                        // dictionary.Add("ThingE", new MetaType { Name = "ThingE", Icon = "icon-people icon-square icon-thinge", Url= "/thingse" });
 
                         dictionary.Add("Project", new MetaType { Name = "Project", Icon = "icon-folder icon-square icon-project", Url= "/projects" });
                         dictionary.Add("Issue", new MetaType { Name = "Issue", Icon = "icon-pin icon-square icon-issue", Url= "/issues" });
@@ -147,14 +147,14 @@ namespace Jello
                 return dictionary;
             }
         }
-        public string ThingAIcon { get { return MetaTypes["ThingA"].Icon; } }
-        public string ThingBIcon { get { return MetaTypes["ThingB"].Icon; } }
-        public string ThingCIcon { get { return MetaTypes["ThingC"].Icon; } }
-        public string ThingDIcon { get { return MetaTypes["ThingD"].Icon; } }
-        public string ThingEIcon { get { return MetaTypes["ThingE"].Icon; } }
+        // public string ThingAIcon { get { return MetaTypes["ThingA"].Icon; } }
+        // public string ThingBIcon { get { return MetaTypes["ThingB"].Icon; } }
+        // public string ThingCIcon { get { return MetaTypes["ThingC"].Icon; } }
+        // public string ThingDIcon { get { return MetaTypes["ThingD"].Icon; } }
+        // public string ThingEIcon { get { return MetaTypes["ThingE"].Icon; } }
 
-        public string ProjectIcon { get { return MetaTypes["ThingE"].Icon; } }
-        public string IssueIcon { get { return MetaTypes["ThingE"].Icon; } }
+        public string ProjectIcon { get { return MetaTypes["People"].Icon; } }
+        public string IssueIcon { get { return MetaTypes["Issue"].Icon; } }
         
         public string AdminIcon { get { return MetaTypes["Admin"].Icon; } }
         public string UserIcon { get { return MetaTypes["User"].Icon; } }
