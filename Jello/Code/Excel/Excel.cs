@@ -936,12 +936,12 @@ namespace Jello
                     issue.Title = row["Title"];
                     if (row.ContainsKey("Description") && row["Description"] != null) issue.Description = row["Description"];
                     if (row.ContainsKey("Type") && row["Type"] != null) issue.Type = row["Type"];
-                    if (row.ContainsKey("Status") && row["Status"] != null) issue.Type = row["Status"];
-                    if (row.ContainsKey("Priority") && row["Priority"] != null) issue.Type = row["Priority"];
-                    if (row.ContainsKey("ProjectId") && row["ProjectId"] != null) issue.Type = row["ProjectId"];
-                    if (row.ContainsKey("ProjectTitle") && row["ProjectTitle"] != null) issue.Type = row["ProjectTitle"];
-                    if (row.ContainsKey("AssigneeId") && row["AssigneeId"] != null) issue.Type = row["AssigneeId"];
-                    if (row.ContainsKey("AssigneeName") && row["AssigneeName"] != null) issue.Type = row["AssigneeName"];
+                    if (row.ContainsKey("Status") && row["Status"] != null) issue.Status = row["Status"];
+                    if (row.ContainsKey("Priority") && row["Priority"] != null) issue.Priority = row["Priority"];
+                    // if (row.ContainsKey("ProjectId") && row["ProjectId"] != null) issue.ProjectId = int.Parse(row["ProjectId"].ToString());
+                    if (row.ContainsKey("ProjectTitle") && row["ProjectTitle"] != null) issue.ProjectTitle = row["ProjectTitle"];
+                    // if (row.ContainsKey("AssigneeId") && row["AssigneeId"] != null) issue.AssigneeId = int.Parse(row["AssigneeId"].ToString());
+                    if (row.ContainsKey("AssigneeName") && row["AssigneeName"] != null) issue.AssigneeName = row["AssigneeName"];
 
                     _db.Issue.Add(issue);
                     await _db.SaveChangesAsync();
