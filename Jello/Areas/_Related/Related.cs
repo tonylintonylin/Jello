@@ -85,5 +85,17 @@ namespace Jello.Areas._Related
             }
         }
 
+        public void Prepare(List<Project> projects, _Projects model, int totalProjects, int parentId, string parentName)
+        {
+            model.TotalProjects = totalProjects;
+            model.ParentId = parentId;
+            model.ParentName = parentName;
+
+            foreach (var project in projects)
+            {
+                var _project = new _Project { Id = project.Id, Title = project.Title };
+                model.Projects.Add(_project);
+            }
+        }
     }
 }
