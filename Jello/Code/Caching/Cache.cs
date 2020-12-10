@@ -28,7 +28,7 @@ namespace Jello
         Dictionary<int, ThingD> ThingsD { get; }
         Dictionary<int, ThingE> ThingsE { get; }
 
-        Dictionary<int, ThingD> Projects { get; }
+        Dictionary<int, Project> Projects { get; }
 
         Dictionary<int, User> Users { get; }
 

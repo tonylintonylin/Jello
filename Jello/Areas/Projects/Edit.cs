@@ -34,7 +34,7 @@ namespace Jello.Areas.Projects
             }
             else
             {
-                _mapper.Map(await _db.project.SingleOrDefaultAsync(c => c.Id == Id), this);
+                _mapper.Map(await _db.Project.SingleOrDefaultAsync(c => c.Id == Id), this);
             }
 
             return View(this);
@@ -51,12 +51,12 @@ namespace Jello.Areas.Projects
                 _db.Project.Add(project);
                 await _db.SaveChangesAsync();
 
-                await SettleInsertAsync(Project);
+                await SettleInsertAsync(project);
             }
             else
             {
                 var project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
-                var originalProject = new Originalproject(Project);
+                var originalProject = new OriginalProject(project);
 
                 _mapper.Map(this, project);
 
@@ -75,15 +75,14 @@ namespace Jello.Areas.Projects
 
         private async Task SettleInsertAsync(Project project)
         {
-            _cache.MergeProject(Project);
-
-            await _rollup.RollupUserAsync(Project.OwnerId);
-        }
-
-        private async Task SettleUpdateAsync(Originalproject original, Project project)
-        {
             _cache.MergeProject(project);
 
+            await _rollup.RollupUserAsync(project.OwnerId);
+        }
+
+        private async Task SettleUpdateAsync(OriginalProject original, Project project)
+        {
+            _cache.MergeProject(project);
 
             if (original.OwnerId != project.OwnerId)
             {
@@ -92,13 +91,13 @@ namespace Jello.Areas.Projects
             }
         }
 
-        private class Originalproject
+        private class OriginalProject
         {
             // Used to temporarily hold a copy of the relevant fields
 
             public int OwnerId { get; set; }
 
-            public Originalproject(Project project)
+            public OriginalProject(Project project)
             {
                 OwnerId = project.OwnerId;
             }
