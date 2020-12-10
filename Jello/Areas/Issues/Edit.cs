@@ -94,18 +94,18 @@ namespace Jello.Areas.Issues
 
             await _rollup.RollupProjectAsync(issue.ProjectId);
             await _rollup.RollupUserAsync(issue.OwnerId);
-            // await _rollup.RollupUserAsync(issue.AssigneeId);
+            await _rollup.RollupUserAsync(issue.AssigneeId);
         }
 
         private async Task SettleUpdateAsync(OriginalIssue original, Issue issue)
         {
             _cache.MergeIssue(issue);
             
-            // if (original.AssigneeId != issue.AssigneeId)
-            // {
-            //     await _rollup.RollupUserAsync(original.AssigneeId);
-            //     await _rollup.RollupUserAsync(issue.AssigneeId);
-            // }
+            if (original.AssigneeId != issue.AssigneeId)
+            {
+                await _rollup.RollupUserAsync(original.AssigneeId);
+                await _rollup.RollupUserAsync(issue.AssigneeId);
+            }
             if (original.ProjectId != issue.ProjectId)
             {
                 await _rollup.RollupProjectAsync(original.ProjectId);
@@ -122,12 +122,12 @@ namespace Jello.Areas.Issues
         {
             // Used to temporarily hold a copy of the relevant fields
             public int? ProjectId { get; set; }
-            // public int? AssigneeId { get; set; }
+            public int? AssigneeId { get; set; }
             public int OwnerId { get; set; }
 
             public OriginalIssue(Issue issue)
             {
-                // AssigneeId = issue.AssigneeId;
+                AssigneeId = issue.AssigneeId;
                 ProjectId = issue.ProjectId;
                 OwnerId = issue.OwnerId;
             }
@@ -146,8 +146,8 @@ namespace Jello.Areas.Issues
 
                 CreateMap<Edit, Issue>()
                    .Map(dest => dest.ProjectTitle, opt => opt.MapFrom(src => src.ProjectId == null ? "" : _cache.Projects[src.ProjectId.Value].Title))
-                   .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias));
-                //    .Map(dest => dest.AssigneeName, opt => opt.MapFrom(src => _cache.Users[src.AssigneeId.Value].Alias));
+                   .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias))
+                   .Map(dest => dest.AssigneeName, opt => opt.MapFrom(src => _cache.Users[src.AssigneeId.Value].Alias));
             }
         }
 
