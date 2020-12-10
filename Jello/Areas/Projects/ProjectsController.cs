@@ -40,8 +40,8 @@ namespace Jello.Areas.Projects
         [HttpPost("import/go")]   // Step 3
         public async Task<IActionResult> Import(Import model) => await model.PostAsync();
 
-        // [HttpGet("export")]
-        // public async Task<IActionResult> Export(Export model) => await model.GetAsync();
+        [HttpGet("export")]
+        public async Task<IActionResult> Export(Export model) => await model.GetAsync();
 
         #endregion
     }

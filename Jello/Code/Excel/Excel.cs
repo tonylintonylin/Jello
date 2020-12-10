@@ -25,7 +25,7 @@ namespace Jello
         byte[] ExportThingsD(List<ThingD> thingsD);
         byte[] ExportThingsE(List<ThingE> thingsE);
 
-        // byte[] ExportProjects(List<ThingE> projects);
+        byte[] ExportProjects(List<Project> projects);
         // byte[] ExportIssues(List<ThingE> issues);
 
         byte[] ExportPeople(List<User> users);
@@ -435,6 +435,66 @@ namespace Jello
                         CreateCell(thingE.OwnerId.CleanNumber(), CellValues.Number),
                         CreateCell(thingE.OwnerAlias, CellValues.String));
 
+
+                    sheetData.AppendChild(row);
+                }
+
+                worksheetPart.Worksheet.Save();
+                document.Close();
+            }
+
+            stream.Position = 0;
+            return stream.ToArray();
+        }
+
+        public byte[] ExportProjects(List<Project> projects)
+        {
+            var stream = new MemoryStream();
+
+            using (var document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+            {
+                var workbookPart = document.AddWorkbookPart();
+                workbookPart.Workbook = new Workbook();
+
+                var worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
+                worksheetPart.Worksheet = new Worksheet();
+
+                var sheets = workbookPart.Workbook.AppendChild(new Sheets());
+                var sheet = new Sheet() { Id = workbookPart.GetIdOfPart(worksheetPart), SheetId = 1, Name = "Sheet1" };
+                sheets.Append(sheet);
+
+                workbookPart.Workbook.Save();
+
+                var sheetData = worksheetPart.Worksheet.AppendChild(new SheetData());
+
+                // Constructing header
+                var row = new Row();
+
+                row.Append(
+                    CreateCell("Id", CellValues.String),
+                    CreateCell("Title", CellValues.String),
+                    CreateCell("Description", CellValues.String),
+                    CreateCell("Type", CellValues.String),
+                    CreateCell("CreatedDate", CellValues.String),
+                    CreateCell("OwnerId", CellValues.String),
+                    CreateCell("OwnerAlias", CellValues.String),
+                    CreateCell("TotalIssues", CellValues.String));
+
+                sheetData.AppendChild(row);
+
+                foreach (var project in projects)
+                {
+                    row = new Row();
+
+                    row.Append(
+                        CreateCell(project.Id.CleanNumber(), CellValues.Number),
+                        CreateCell(project.Title, CellValues.String),
+                        CreateCell(project.Description, CellValues.String),
+                        CreateCell(project.Type, CellValues.String),
+                        CreateCell(project.CreatedDate.ToDate(), CellValues.String),
+                        CreateCell(project.OwnerId.CleanNumber(), CellValues.String),
+                        CreateCell(project.OwnerAlias, CellValues.String),
+                        CreateCell(project.TotalIssues.CleanNumber(), CellValues.Number));
 
                     sheetData.AppendChild(row);
                 }
