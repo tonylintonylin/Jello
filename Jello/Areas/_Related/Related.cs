@@ -80,7 +80,7 @@ namespace Jello.Areas._Related
 
             foreach (var issue in issues)
             {
-                var _issue = new _Issue { Id = issue.Id, Title = issue.Title };
+                var _issue = new _Issue { Id = issue.Id, Title = issue.Title, Type = issue.Type, Status = issue.Status , Priority = issue.Priority  };
                 model.Issues.Add(_issue);
             }
         }

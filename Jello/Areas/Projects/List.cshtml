@@ -40,33 +40,18 @@
 
 
         <div id="advanced-filter" style='display:@(Model.AdvancedFilter ? "block" : "none")'>
-
-            <div class="row mt-17">
-
-                <div class="col-4">
-                    <inputTextBox value="Title" label="Project Title"></inputTextBox>
+            <div class="row mt-10 mb-7">
+                <div class="col-3">
+                    <inputTextBox value="Title" label="Title"></inputTextBox>
                 </div>
-
-                <div class="col-4">
-                    <inputDropDown value="Type" items="Lookup.ProjectTypes"></inputDropDown>
+                <div class="col-3">
+                    <inputSearch value="OwnerId" label="Lead" placeholder="Search Users.."></inputSearch>
                 </div>
-
                 <div class="col-4">
-                    <div class="page-box-items-advanced">@Model.TotalRows &nbsp;Items</div>
-                </div>
-            </div>
-
-            <div class="row mt-10 mb-15">
-                <div class="col-4">
-                    <inputSearch value="OwnerId" label="Owner Name" placeholder="Search Users.."></inputSearch>
-                </div>
-                @* <div class="col-4">
-                    <inputSearch value="OwnerId" label="Owner Name" placeholder="Search Users.."></inputSearch>
-                </div> *@
-                <div class="col-4">
-                    <div class="pt-5">
+                    <div class="pt-3 pl-30">
                         <button class="btn btn-light btn-sm js-filter" type="submit"> Filter </button>&nbsp;
                         <a href="/projects?AdvancedFilter=True" class="btn btn-light btn-sm"> Reset </a>
+                        <span class="page-box-items-advanced">@Model.TotalRows Items</span>
                     </div>
                 </div>
             </div>
