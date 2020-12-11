@@ -11,17 +11,8 @@ namespace Jello.Areas.Home
     {
         #region Data
         public int CompletedIssues { get; set; }
-<<<<<<< HEAD
         public int NewIssues { get; set; }
         public int OpenProjects { get; set; }
-        public int IssueCount { get; set; }
-        public int UrgentIssues { get; set; }
-=======
-
-        public int NewIssues { get; set; }
-
-        public int OpenProjects { get; set; }
-
         public int IssueCount { get; set; }
         public int UrgentIssues { get; set; }
    
@@ -30,7 +21,6 @@ namespace Jello.Areas.Home
 
         public string DealsByStage { get; set; }
         public string PieChartValues { get; set; }
->>>>>>> f0b2511430fd30ca65d8edcd405f7d946f29351b
 
         public List<_Project> Projects { get; } = new List<_Project>();
         public List<_Viewed> Vieweds { get; } = new List<_Viewed>();
@@ -47,27 +37,14 @@ namespace Jello.Areas.Home
             var projects = await _db.Project.ToListAsync();
             var users = await _db.User.ToListAsync();
 
-<<<<<<< HEAD
             CompletedIssues = issues.Where(i => i.Status == "Done").Count();
             NewIssues = issues.Where(i => i.Status == "New").Count();
-=======
-            IssueCount = issues.Count();
-            UrgentIssues = issues.Where(i => i.Priority == "Urgent").Count();
-
-            CompletedIssues = issues.Where(i => i.Status == "Done").Count();
-
->>>>>>> f0b2511430fd30ca65d8edcd405f7d946f29351b
             OpenProjects = projects.Where(p => p.Issue.Where(i => 
                 i.Status == "In Progress"
                 || i.Status == "In Review"
                 || i.Status == "New").Count() > 0).Count();
-<<<<<<< HEAD
             IssueCount = issues.Count();
             UrgentIssues = issues.Where(i => i.Priority == "Urgent").Count();
-=======
-
-            NewIssues = issues.Where(i => i.Status == "New").Count();
->>>>>>> f0b2511430fd30ca65d8edcd405f7d946f29351b
 
             // Recently viewed
             var viewed = _db.Viewed.Where(v => v.UserId == _currentUser.Id)
@@ -76,10 +53,7 @@ namespace Jello.Areas.Home
 
             _mapper.Map(viewed, Vieweds);
 
-<<<<<<< HEAD
             // Top Projects by Issue count
-=======
->>>>>>> f0b2511430fd30ca65d8edcd405f7d946f29351b
             var topProjects = await _db.Project.OrderByDescending(o => o.TotalIssues)
                                             .Take(7).ToListAsync();
 
