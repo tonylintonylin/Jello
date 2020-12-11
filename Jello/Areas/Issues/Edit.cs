@@ -21,11 +21,12 @@ namespace Jello.Areas.Issues
         public string Status { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public int? ProjectId { get; set; }
+        [Required(ErrorMessage = "Project is required")]
+        public int ProjectId { get; set; }
         public string ProjectTitle { get; set; }
 
         public int? AssigneeId { get; set; }
-        public string AssigneeName { get; set; }
+        // public string AssigneeName { get; set; }
 
         public int? OwnerId { get; set; }
         public string OwnerAlias { get; set; }
@@ -42,7 +43,7 @@ namespace Jello.Areas.Issues
                 OwnerId = _currentUser.Id;
                 OwnerName = _currentUser.Name;
                 AssigneeId = HttpContext.Request.Query["AssigneeId"].GetId();
-                AssigneeName = HttpContext.Request.Query["AssigneeName"];
+                // AssigneeName = HttpContext.Request.Query["AssigneeName"];
                 ProjectId = HttpContext.Request.Query["ProjectId"].GetId();
                 ProjectTitle = HttpContext.Request.Query["ProjectTitle"];
             }
@@ -121,7 +122,7 @@ namespace Jello.Areas.Issues
         private class OriginalIssue
         {
             // Used to temporarily hold a copy of the relevant fields
-            public int? ProjectId { get; set; }
+            public int ProjectId { get; set; }
             public int? AssigneeId { get; set; }
             public int OwnerId { get; set; }
 
@@ -145,9 +146,8 @@ namespace Jello.Areas.Issues
                    .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => src.OwnerId == 0 ? "" : _cache.Users[src.OwnerId].Name));
 
                 CreateMap<Edit, Issue>()
-                   .Map(dest => dest.ProjectTitle, opt => opt.MapFrom(src => src.ProjectId == null ? "" : _cache.Projects[src.ProjectId.Value].Title))
-                   .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias))
-                   .Map(dest => dest.AssigneeName, opt => opt.MapFrom(src => _cache.Users[src.AssigneeId.Value].Alias));
+                //    .Map(dest => dest.ProjectTitle, opt => opt.MapFrom(src => _cache.Projects[src.ProjectId].Title))
+                   .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias));
             }
         }
 

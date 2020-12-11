@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Jello
 {
-    // Exposes properties for currently authenticated user
+    // Properties of currently authenticated user
 
     #region Interface
 

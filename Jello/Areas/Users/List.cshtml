@@ -4,7 +4,6 @@
 }
 
 <div class="page-box">
-
     <div class="d-flex">
         <div class="page-box-icon">
             <a href="/admin"><i class="@Cache.AdminIcon"></i></a> Admin
@@ -19,10 +18,8 @@
 </div>
 
 <form>
-
     <input asp-for="Page" type="hidden" />
     <input asp-for="Sort" type="hidden" />
-
     <div class="d-flex py-10">
         <div class="pt-12 pl-10">@Model.TotalRows items</div>
         <div class="ml-auto">
@@ -37,7 +34,6 @@
             </div>
         </div>
     </div>
-
     <table class="table table-hover table-sm table-list">
         <tr class="bg-light">
             <th><a sort="LastName">Name</a></th>
@@ -49,12 +45,10 @@
             <th><a sort="LastLoginDate">Last Login</a></th>
             <th>&nbsp;</th>
         </tr>
-
         @if (Model.Items.Count() == 0)
         {
             <tr><td colspan="8" class="no-items">No items to display</td></tr>
         }
-
         @foreach (var item in Model.Items)
         {
             <tr>
@@ -80,11 +74,8 @@
             </tr>
         }
     </table>
-
     <partial name="_Pager" />
-
 </form>
-
 <br />
 <br />
 <br />

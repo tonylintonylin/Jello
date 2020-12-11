@@ -31,10 +31,9 @@ namespace Jello
 
         #endregion
 
+        // Logs a viewed record
         public async Task Log(int whatId, string whatType, string whatName)
         {
-            // Logs a viewed record
-
             if (whatId != 0)
             {
                 var viewed = await _db.Viewed.SingleOrDefaultAsync(v => v.WhatId == whatId && v.WhatType == whatType && v.UserId == _currentUser.Id);
@@ -65,10 +64,9 @@ namespace Jello
             }
         }
 
+        // Get most recently viewed items of a given type for currentuser
         public int[] GetIds(string whatType)
         {
-            // Get most recently viewed items of a given type for currentuser
-
             var whatIds = _db.Viewed
                 .FromSqlInterpolated($"SELECT WhatId FROM Viewed WHERE UserId = {_currentUser.Id} AND WhatType = {whatType}")
                 .Select(v => v.WhatId).ToArray();

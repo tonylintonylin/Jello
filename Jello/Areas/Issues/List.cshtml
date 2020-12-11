@@ -135,9 +135,9 @@
 
         $(function () {
             
-            Dofactory.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
-            Dofactory.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
-            Dofactory.Utils.Typeahead.init("AssigneeId", @Html.Raw(Typeahead.Owners));
+            JelloNamespace.Utils.Typeahead.init("ProjectId", @Html.Raw(Typeahead.Projects));
+            JelloNamespace.Utils.Typeahead.init("OwnerId", @Html.Raw(Typeahead.Owners));
+            JelloNamespace.Utils.Typeahead.init("AssigneeId", @Html.Raw(Typeahead.Owners));
 
         });
 

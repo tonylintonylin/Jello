@@ -14,15 +14,10 @@ namespace Jello.Domain
         public virtual DbSet<Issue> Issue { get; set; }
         public virtual DbSet<Project> Project { get; set; }
         
-        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Error> Error { get; set; }
         public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<Viewed> Viewed { get; set; }
-        public virtual DbSet<ThingA> ThingA { get; set; }
-        public virtual DbSet<ThingB> ThingB { get; set; }
-        public virtual DbSet<ThingC> ThingC { get; set; }
-        public virtual DbSet<ThingD> ThingD { get; set; }
-        public virtual DbSet<ThingE> ThingE { get; set; }
+
         public virtual DbSet<User> User { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Jello
 {
-    // Collection of cryptographic methods
-
+    // Collection of cryptographic methods, use for auth and random generation
     public static class Crypto
     {
         // private key and initialization vector. use different ones in your own work. 
@@ -55,7 +54,7 @@ namespace Jello
             return Encoding.ASCII.GetString(stream.ToArray());
         }
 
-        public static string RandomString(int length)  // lowercase string
+        public static string RandomString(int length)
         {
             string c = "abcdefghjklmnopqrstuvwxyz0123456789";
             var random = new Random(Environment.TickCount);

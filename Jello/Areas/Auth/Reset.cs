@@ -10,7 +10,8 @@ namespace Jello.Areas.Auth
     {
         #region Data
 
-        public string Cd { get; set; } // reset code
+        // reset code
+        public string Code { get; set; } 
 
         [Required(ErrorMessage = "New password is required")]
         [DataType(DataType.Password)]
@@ -29,7 +30,7 @@ namespace Jello.Areas.Auth
 
         public override async Task<IActionResult> GetAsync()
         {
-            var user = await _db.User.SingleAsync(u => u.ResetCode == Cd && u.ResetDate == null);
+            var user = await _db.User.SingleAsync(u => u.ResetCode == Code && u.ResetDate == null);
             if (user != null) return View(this);
 
             return RedirectToAction("ResetFailed");
@@ -39,7 +40,7 @@ namespace Jello.Areas.Auth
         {
             if (!ModelState.IsValid) return View(this);
 
-            var user = await _db.User.SingleAsync(u => u.ResetCode == Cd && u.ResetDate == null);
+            var user = await _db.User.SingleAsync(u => u.ResetCode == Code && u.ResetDate == null);
             if (user != null)
             {
                 await _identityService.ResetPasswordAsync(user, NewPassword);

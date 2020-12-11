@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Jello.Domain
 {
@@ -10,7 +9,9 @@ namespace Jello.Domain
         public int WhatId { get; set; }
         public string WhatType { get; set; }
         public string WhatName { get; set; }
+
         public DateTime ViewDate { get; set; }
+
         public DateTime CreatedOn { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime ChangedOn { get; set; }

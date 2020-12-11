@@ -19,7 +19,7 @@ namespace Jello
 
     public class Email : IEmail
     {
-        private static string FromEmail = "hello@company.com";
+        private static string FromEmail = "support@example.com";
 
         public void SendActivationMessage(User user)
         {
@@ -34,12 +34,11 @@ namespace Jello
             sb.AppendLine("If clicking the link does not work, copy it into your browser command line. ");
             sb.AppendLine();
 
-            sb.AppendLine("33-Day Starter");
-            sb.AppendLine("www.dofactory.com");
+            sb.AppendLine("www.Jello.com");
             sb.AppendLine();
 
             var to = user.Email;
-            var subject = "Dofactory Starter account activation";
+            var subject = "Jello Starter account activation";
             var body = sb.ToString();
 
             string from = FromEmail;
@@ -63,12 +62,10 @@ namespace Jello
             sb.AppendLine("If clicking the link does not work, copy it into your browser command line. ");
             sb.AppendLine();
 
-            sb.AppendLine("33-Day Starter");
-            sb.AppendLine("www.dofactory.com");
             sb.AppendLine();
 
             var to = user.Email;
-            var subject = "Dofactory Starter password reset";
+            var subject = "Jello Password reset";
             var body = sb.ToString();
 
             string from = FromEmail;
@@ -77,6 +74,8 @@ namespace Jello
 
         private void Send(string from, string to, string subject, string body)
         {
+            // Add smtp
+
             var client = new SmtpClient("mail.company.com");
             client.UseDefaultCredentials = false;
             client.Credentials = new NetworkCredential("username", "password");
@@ -89,7 +88,7 @@ namespace Jello
             message.Subject = subject;
             message.Body = body;
 
-            // Uncomment in production
+            // Uncomment in Production
             //client.Send(message);
         }
     }

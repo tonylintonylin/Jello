@@ -30,7 +30,6 @@ namespace Jello
             .AddRazorOptions(o =>
             {
                 // Helps finding shared and other fully qualified resources
-
                 o.ViewLocationFormats.Clear();
                 o.ViewLocationFormats.Add(options.AreaPlaceholder + @"\{0}.cshtml");
                 o.ViewLocationFormats.Add(options.RootFolderName + @"\_Base\{0}.cshtml");

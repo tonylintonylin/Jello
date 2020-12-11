@@ -10,7 +10,7 @@ namespace Jello.Areas.Errors
     {
         #region Data
 
-        public string DeleteCount { get; set; } // placeholder for binding
+        public string DeleteCount { get; set; }
 
         #endregion
 

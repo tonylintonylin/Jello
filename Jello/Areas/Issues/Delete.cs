@@ -37,7 +37,7 @@ namespace Jello.Areas.Issues
             await _db.Database.ExecuteSqlInterpolatedAsync(
                 $"DELETE FROM Viewed WHERE WhatId = {issue.Id} AND WhatType = 'Issue';");
 
-            await _rollup.RollupThingAAsync(issue.ProjectId);
+            await _rollup.RollupProjectAsync(issue.ProjectId);
             await _rollup.RollupUserAsync(issue.OwnerId);
         }
 

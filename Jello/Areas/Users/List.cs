@@ -77,7 +77,7 @@ namespace Jello.Areas.Users
 
         #region Mapping
 
-        // Details are mapping in associated Detail.cs file
+        // Mapping done in Detail.cs
 
         #endregion
     }

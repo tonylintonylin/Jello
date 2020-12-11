@@ -17,9 +17,7 @@ namespace Jello.Areas.Issues
         public string Status { get; set; }
 
         public int? ProjectId { get; set; }
-
         public int? AssigneeId { get; set; }
-
         public int? OwnerId { get; set; }
 
         #endregion

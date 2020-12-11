@@ -61,7 +61,7 @@ namespace Jello
         {
             var user = _db.User.Single(u => u.Email == email);
             
-            // This triggers 'CreateAsync' in ClaimsPrincipalFactory
+            // Triggers 'CreateAsync' in ClaimsPrincipalFactory
             return await _signInManager.PasswordSignInAsync(user.IdentityName, password, true, false); // isPersistent, shouldLockout);
         }
 
@@ -75,7 +75,9 @@ namespace Jello
             try
             {
                 user.IdentityName = Guid.NewGuid().ToString();
-                var appUser = new IdentityUser { UserName = user.IdentityName, Email = user.Email }; // provide email, but not used 
+
+                // Provide email, but not used 
+                var appUser = new IdentityUser { UserName = user.IdentityName, Email = user.Email }; 
 
                 IdentityResult result;
                 if (password != null)
@@ -84,7 +86,8 @@ namespace Jello
                 }
                 else
                 {
-                    result = await _userManager.CreateAsync(appUser);  // user with external login
+                    // User with external login
+                    result = await _userManager.CreateAsync(appUser);  
                 }
 
                 result = await _userManager.AddToRolesAsync(appUser, roles);
@@ -105,7 +108,9 @@ namespace Jello
             try
             {
                 user.IdentityName = Guid.NewGuid().ToString();
-                var appUser = new IdentityUser { UserName = user.IdentityName, Email = user.Email }; // provide email, but not used 
+
+                // Provide email, but not used 
+                var appUser = new IdentityUser { UserName = user.IdentityName, Email = user.Email }; 
 
                 IdentityResult result;
                 if (password != null)
@@ -114,7 +119,8 @@ namespace Jello
                 }
                 else
                 {
-                    result = await _userManager.CreateAsync(appUser);  // user with external login
+                    // User with external login
+                    result = await _userManager.CreateAsync(appUser);  
                 }
 
                 result = await _userManager.AddToRolesAsync(appUser, roles);
@@ -143,7 +149,7 @@ namespace Jello
 
                 if (original.Email != user.Email) await ChangeEmailAsync(user);
 
-                // cannot track 2 entities with same key: 'original' and 'user'
+                // Cannot track 2 entities with same key: 'original' and 'user'
                 _db.Entry(original).State = EntityState.Detached;
 
                 _db.User.Update(user);
@@ -193,7 +199,7 @@ namespace Jello
         {
             var appUser = await _userManager.FindByIdAsync(user.IdentityId);
 
-            // This triggers 'CreateAsync' in ClaimsPrincipalFactory
+            // Triggers 'CreateAsync' in ClaimsPrincipalFactory
             await _signInManager.RefreshSignInAsync(appUser);
         }
 

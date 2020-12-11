@@ -1,2 +1,6 @@
 *.mdf
 *.ldf
+*.cache
+*.dll
+*.exe
+*.pdb

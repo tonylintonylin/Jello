@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HoEUavaF7esYnxbFVDV5lvUCAhR2Wt3zYmnIMxySDwRJ2aO9oV75ywEUqqER4nokD1MDfh2z435INQ7JPIyGfg==",
+  "dgSpecHash": "mlTVj+qG989Jg1euG0c9k9j850CehZyiuwEEP1HODIpvoSXvb6T2Hx7IU0V4Du3Um4W1ocwSPwlSp3DhOP+mqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
   "expectedPackageFiles": [
@@ -118,7 +118,9 @@
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

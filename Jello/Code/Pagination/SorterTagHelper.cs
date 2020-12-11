@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace Jello
 {
-    // Taghelper for sorting. Used in table headers. 
-
+    // Taghelper for sorting
     [HtmlTargetElement("a", Attributes = SortAttributeName)]
     public class SorterTagHelper : TagHelper
     {
@@ -37,17 +36,16 @@ namespace Jello
             if (model.UnsignedSort.Equals(Sort, StringComparison.CurrentCultureIgnoreCase))
                 tagBuilder.AddCssClass("selected-" + (model.Sort.StartsWith("-") ? "desc" : "asc"));
             else
-                tagBuilder.AddCssClass("selected-none");  // prevents the column width from changing
+                tagBuilder.AddCssClass("selected-none");
 
             var sort = Reverse(Sort, model.Sort);
             tagBuilder.MergeAttribute("data-sort", sort);
             tagBuilder.MergeAttribute("href", "javascript:void(0);");
 
-            // translate content
-
+            // Translate content
             var childContent = await output.GetChildContentAsync();
 
-           // output.Attributes.Clear();
+            // output.Attributes.Clear();
             output.Content.Clear();
 
             using (var writer = new StringWriter())

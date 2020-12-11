@@ -73,7 +73,6 @@ namespace Jello.Areas.People
                 }
             }
 
-
             // Sorting
 
             query = Sort switch

@@ -12,15 +12,12 @@ using System.Threading.Tasks;
 
 namespace Jello
 {
-    // Base class to all ActionModels
-
+    // Base class to all Models
     public class BaseModel
     {
         #region Dependency Injection
 
         protected static HttpContext HttpContext => ServiceLocator.Resolve<IHttpContextAccessor>().HttpContext;
-
-        // ** Lazy Injection Pattern
 
         private ICache cache;
         private IExcel excel;
@@ -54,7 +51,7 @@ namespace Jello
 
         private static Controller Controller { get => HttpContext.Features.Get<ControllerAccessor>()?.Controller; }
       
-        // Add additional controller methods and properties as needed.
+        // Add/Delete controller methods and properties when neccessary.
 
         protected static RouteData RouteData { get => Controller.RouteData; }
         protected static HttpRequest Request { get => Controller.Request; }

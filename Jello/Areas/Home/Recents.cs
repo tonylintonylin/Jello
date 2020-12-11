@@ -25,10 +25,6 @@ namespace Jello.Areas.Home
 
         #endregion
 
-        #region Mapping
-
-        // Already mapped in this module's List.cs file.
-
-        #endregion
+        // Mapping done in List.cs.
     }
 }

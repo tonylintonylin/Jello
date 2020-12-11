@@ -8,7 +8,7 @@ namespace Jello.Areas.Admin
         public override async Task<IActionResult> GetAsync()
         {
             await _rollup.RollupAllAsync();
-            Success = "Rollups have been completed";
+            Success = "Rollup calculation done";
             
             return LocalRedirect("/admin");
         }

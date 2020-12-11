@@ -13,7 +13,6 @@ namespace Jello.Areas.Landing
         public IActionResult Error(Error model) => model.Get();
 
         // Catches all requests for which there is no route handler
-
         [Route("{*url}", Order = 9999)]
         public IActionResult CatchAll(CatchAll model) => model.GetOrPost();
 

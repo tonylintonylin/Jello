@@ -5,7 +5,6 @@ namespace Jello
     public static class FormatExtensions
     {
         // Format date according to Locale
-
         public static string FormatDate(this DateTime? dt)
         {
             if (dt == null) return "";
@@ -29,7 +28,6 @@ namespace Jello
         }
 
         // Format currency according to Locale / Currency settings
-
         public static string FormatCurrency(this decimal? amount)
         {
             if (amount == null) return "";

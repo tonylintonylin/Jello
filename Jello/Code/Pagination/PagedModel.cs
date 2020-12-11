@@ -4,11 +4,9 @@ using System.Collections.Generic;
 namespace Jello
 {
     // Base viewmodel for paginated pages
-
     public abstract class PagedModel : BaseModel
     {
         // Default values 
-
         public int Page { get; set; } = 1;
         public int PageSize { get; set; } = 15;
         public string Sort { get; set; } = "-Id";
@@ -18,12 +16,10 @@ namespace Jello
         public int TotalRows { get; set; }
 
         // Shorthand for Entity Framework Skip and Take methods
-
         public int Skip { get { return Math.Max(FirstRow - 1, 0); } }
         public int Take { get { return PageSize; } }
 
         // Pagination helpers 
-
         public int FirstRow { get { return Math.Min(Math.Max(1, ((Page - 1) * PageSize) + 1), TotalRows); } }
         public int LastRow { get { return Math.Min(FirstRow + PageSize - 1, TotalRows); } }
         public string Range { get { return FirstRow.ToString() + " - " + LastRow.ToString(); } }
@@ -38,7 +34,6 @@ namespace Jello
     }
 
     // Typed base viewmodel supporting a list of paginated items
-
     public abstract class PagedModel<T> : PagedModel
     {
         public List<T> Items { get; set; } = new List<T>();

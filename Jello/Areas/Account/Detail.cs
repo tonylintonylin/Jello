@@ -16,7 +16,6 @@ namespace Jello.Areas.Account
         public string City { get; set; }
         public string Country { get; set; }
 
-
         #endregion
 
         #region Handlers

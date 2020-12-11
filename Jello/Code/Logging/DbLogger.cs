@@ -34,7 +34,9 @@ namespace Jello
             {
                 var httpContextAccessor = ServiceLocator.Resolve<IHttpContextAccessor>();
                 var httpContext = httpContextAccessor?.HttpContext;
-                if (httpContext == null) return;  // Nothing to log
+
+                // Nothing to log
+                if (httpContext == null) return;  
 
                 var error = new Error();
 
@@ -67,7 +69,7 @@ namespace Jello
             }
             catch
             {
-                /* possibly notify by email about logging error */
+                /* Possibly notify by email about logging error */
             }
         }
 

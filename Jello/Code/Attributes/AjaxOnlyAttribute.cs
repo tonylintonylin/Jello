@@ -6,7 +6,6 @@ using System;
 namespace Jello
 {
     // Only accepts Ajax calls
-
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class AjaxOnlyAttribute : ActionMethodSelectorAttribute
     {

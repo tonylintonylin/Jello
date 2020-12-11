@@ -7,12 +7,10 @@ using System.Linq.Expressions;
 
 namespace Jello
 {
-    // Small set of helpful extension methods
 
     public static class Extensions
     {
         // Comma separate an enumerable source
-
         public static string CommaSeparate<T, U>(this IEnumerable<T> source, Func<T, U> func)
         {
             if (source.Count() == 0) return "0";
@@ -20,22 +18,18 @@ namespace Jello
         }
 
         // Comma separate an enumerable source
-
         public static string CommaSeparatePadded<T, U>(this IEnumerable<T> source, Func<T, U> func)
         {
             if (source.Count() == 0) return "0";
             return string.Join(", ", source.Select(s => func(s).ToString()).ToArray());
         }
 
-        // checks if string is numeric
-
         public static bool IsNumeric(this string s)
         {
             return int.TryParse(s, out int result);
         }
 
-        // used for currency, remove all non-numbers
-
+        // Used for currency, remove all non-numbers
         public static string OnlyNumbers(this string s)
         {
             return string.Join("", s.Where(char.IsDigit));
@@ -124,10 +118,6 @@ namespace Jello
             return number?.ToString().Replace(",", "");
         }
 
-        // ** Iterator Design Pattern
-
-        // foreach iterates over an enumerable collection
-
         public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
         {
             foreach (T item in enumeration)
@@ -137,7 +127,6 @@ namespace Jello
         }
 
         // Truncates a string and appends ellipsis if beyond a given length
-
         public static string Ellipsify(this string s, int maxLength)
         {
             if (string.IsNullOrEmpty(s)) return "";
@@ -147,7 +136,6 @@ namespace Jello
         }
 
         // Mimics SQL IN Clause
-
         public static bool In<T>(this T source, params T[] list)
         {
             return list.Contains(source);
@@ -174,7 +162,6 @@ namespace Jello
         }
 
         // Appends sql AND clauses
-
         public static string AND(this string clause, string condition)
         {
             if (string.IsNullOrEmpty(condition))
@@ -190,7 +177,6 @@ namespace Jello
         }
 
         // Appends sql OR clauses
-
         public static string OR(this string clause, string condition)
         {
             if (string.IsNullOrEmpty(condition))

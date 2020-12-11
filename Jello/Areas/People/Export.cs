@@ -20,7 +20,7 @@ namespace Jello.Areas.People
             var items = await BuildQuery().ToListAsync();
 
             Bytes = _excel.ExportPeople(items);
-            FileName = "ExcelPeople-" + System.DateTime.Now.ToFileStampDateTime() + ".xlsx";
+            FileName = "ExcelExportedPeople-" + System.DateTime.Now.ToFileStampDateTime() + ".xlsx";
 
             return File(Bytes, "application/vnd.ms-excel", FileName);
         }

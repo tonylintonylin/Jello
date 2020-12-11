@@ -14979,11 +14979,6 @@
   "RootNamespace": "Jello",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsB\\Import.cshtml",
-      "TargetPath": "Areas\\ThingsB\\Import.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Activate.cshtml",
       "TargetPath": "Areas\\Auth\\Activate.cshtml",
       "FileKind": "mvc"
@@ -14999,23 +14994,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsA\\Detail.cshtml",
-      "TargetPath": "Areas\\ThingsA\\Detail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Issues\\List.cshtml",
       "TargetPath": "Areas\\Issues\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsD\\Import.cshtml",
-      "TargetPath": "Areas\\ThingsD\\Import.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsB\\Detail.cshtml",
-      "TargetPath": "Areas\\ThingsB\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15031,16 +15011,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Alert.cshtml",
       "TargetPath": "Areas\\_Base\\_Alert.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_ThingA.cshtml",
-      "TargetPath": "Areas\\_Related\\_ThingA.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsC\\List.cshtml",
-      "TargetPath": "Areas\\ThingsC\\List.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15069,16 +15039,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsA\\Import.cshtml",
-      "TargetPath": "Areas\\ThingsA\\Import.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsB\\List.cshtml",
-      "TargetPath": "Areas\\ThingsB\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_Project.cshtml",
       "TargetPath": "Areas\\_Related\\_Project.cshtml",
       "FileKind": "mvc"
@@ -15101,11 +15061,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Login.cshtml",
       "TargetPath": "Areas\\Auth\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsE\\Import.cshtml",
-      "TargetPath": "Areas\\ThingsE\\Import.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15134,16 +15089,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsB\\Edit.cshtml",
-      "TargetPath": "Areas\\ThingsB\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsD\\Edit.cshtml",
-      "TargetPath": "Areas\\ThingsD\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Admin\\List.cshtml",
       "TargetPath": "Areas\\Admin\\List.cshtml",
       "FileKind": "mvc"
@@ -15151,16 +15096,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Layout.cshtml",
       "TargetPath": "Areas\\_Base\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_ThingE.cshtml",
-      "TargetPath": "Areas\\_Related\\_ThingE.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_ThingC.cshtml",
-      "TargetPath": "Areas\\_Related\\_ThingC.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15189,33 +15124,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsE\\Edit.cshtml",
-      "TargetPath": "Areas\\ThingsE\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsC\\Edit.cshtml",
-      "TargetPath": "Areas\\ThingsC\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Errors\\List.cshtml",
       "TargetPath": "Areas\\Errors\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_ThingD.cshtml",
-      "TargetPath": "Areas\\_Related\\_ThingD.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_ThingB.cshtml",
-      "TargetPath": "Areas\\_Related\\_ThingB.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsD\\Detail.cshtml",
-      "TargetPath": "Areas\\ThingsD\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15254,11 +15164,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsC\\Detail.cshtml",
-      "TargetPath": "Areas\\ThingsC\\Detail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ResetConfirm.cshtml",
       "TargetPath": "Areas\\Auth\\ResetConfirm.cshtml",
       "FileKind": "mvc"
@@ -15269,18 +15174,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsA\\Edit.cshtml",
-      "TargetPath": "Areas\\ThingsA\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Account\\Password.cshtml",
       "TargetPath": "Areas\\Account\\Password.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsC\\Import.cshtml",
-      "TargetPath": "Areas\\ThingsC\\Import.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15299,11 +15194,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsE\\List.cshtml",
-      "TargetPath": "Areas\\ThingsE\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\_Layout.cshtml",
       "TargetPath": "Areas\\Auth\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -15316,21 +15206,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Landing\\Error.cshtml",
       "TargetPath": "Areas\\Landing\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsE\\Detail.cshtml",
-      "TargetPath": "Areas\\ThingsE\\Detail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsA\\List.cshtml",
-      "TargetPath": "Areas\\ThingsA\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\ThingsD\\List.cshtml",
-      "TargetPath": "Areas\\ThingsD\\List.cshtml",
       "FileKind": "mvc"
     },
     {

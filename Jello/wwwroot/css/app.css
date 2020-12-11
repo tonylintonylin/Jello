@@ -1,9 +1,4 @@
-﻿/* 
- *   Dofactory.com 
- *  (c) Copyright 2018. All rights reserved.
-*/
-
-/* ============ 
+﻿/* ============ 
    General
    =============*/
 
@@ -36,7 +31,7 @@ a:hover {
 /* Main menu nav */
 
 .main-menu {
-  background: #12538d;
+  background: #36b37e;
   height: 48px;
 }
 
@@ -81,7 +76,7 @@ a:hover {
   height: 30px;
   line-height: 30px;
   vertical-align: middle;
-  background: #12538d;
+  background: #36b37e;
   color: #fff;
   padding-top: 6px;
   text-align: center;
@@ -108,8 +103,7 @@ a:hover {
 .page-box-admin-menu {
   padding: 0 0 0 30px;
 }
-.nav-admin {
-}
+
 .nav-admin .nav-item {
   padding-right: 16px;
 }
@@ -760,8 +754,7 @@ a.selected-none:active {
   padding: 0;
   position: relative;
 }
-.stepped-progress > .stepped-progress-step + .stepped-progress-step {
-}
+
 .stepped-progress > .stepped-progress-step .stepped-progress-stepnum {
   font-size: 14px;
   margin-bottom: 5px;
@@ -841,8 +834,7 @@ a.selected-none:active {
 .stepped-progress > .stepped-progress-step:last-child > .progress {
   width: 50%;
 }
-.stepped-progress > .stepped-progress-step.disabled a.stepped-progress-dot {
-}
+
 .stepped-progress > .stepped-progress-step.disabled .stepped-progress-check {
   position: absolute;
   display: block;
@@ -864,6 +856,7 @@ a.selected-none:active {
   right: 0;
   margin: 0;
   opacity: 0;
+  filter: "alpha(opacity=0)";
   -ms-filter: "alpha(opacity=0)";
   cursor: pointer;
 }

@@ -41,7 +41,7 @@ namespace Jello.Areas.Projects
             var project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
             _mapper.Map(project, this);
             
-            var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(4).ToListAsync();
+            var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(6).ToListAsync();
             _related.Prepare(issues, Issues, project.TotalIssues, project.Id, project.Title);
             
             await _viewedService.Log(Id, "Project", project.Title);

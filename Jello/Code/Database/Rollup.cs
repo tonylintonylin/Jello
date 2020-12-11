@@ -12,15 +12,9 @@ namespace Jello
 
         Task RollupAllAsync();
 
-        Task RollupThingAAsync(int? id);
-
         Task RollupProjectAsync(int? id);
         Task RollupIssueAsync(int? id);
 
-        Task RollupThingBAsync(int? id);
-        Task RollupThingCAsync(int? id);
-        Task RollupThingDAsync(int? id);
-        Task RollupThingEAsync(int? id);
         Task RollupUserAsync(int? id);
     }
 
@@ -47,13 +41,7 @@ namespace Jello
         {
             // Refresh denormalized columns
 
-            await RollupThingsAAsync();
-            await RollupThingsBAsync();
-            await RollupThingsCAsync();
-            await RollupThingsDAsync();
-            await RollupThingsEAsync();
-
-            await RollupProjectsEAsync();
+            await RollupProjectsAsync();
             await RollupIssuesAsync();
 
             await RollupUsersAsync();
@@ -63,7 +51,7 @@ namespace Jello
 
         #region Table Rollups
 
-        private async Task RollupProjectsEAsync()
+        private async Task RollupProjectsAsync()
         {
             string sql =
             @"UPDATE [Project] 
@@ -79,59 +67,6 @@ namespace Jello
             @"UPDATE [Issue] 
                  SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Issue].OwnerId),
                      ProjectTitle = (SELECT Title FROM [Project] WHERE [Project].Id = [Issue].ProjectId);";
-
-            await _db.Database.ExecuteSqlRawAsync(sql);
-        }
-
-        private async Task RollupThingsAAsync()
-        {
-            string sql =
-            @"UPDATE [ThingA] 
-                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingA].OwnerId),
-                     ThingBName = (SELECT Name FROM [ThingB] WHERE [ThingB].Id = [ThingA].ThingBId),
-                     ThingCName = (SELECT Name FROM [ThingC] WHERE [ThingC].Id = [ThingA].ThingCId),
-                     TotalThingsE = (SELECT COUNT(ThingE.Id) FROM [ThingE] WHERE [ThingE].ThingAId = [ThingA].Id);";
-
-            await _db.Database.ExecuteSqlRawAsync(sql);
-        }
-
-        private async Task RollupThingsBAsync()
-        {
-            string sql =
-            @"UPDATE [ThingB] 
-                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingB].OwnerId),
-                     TotalThingsA = (SELECT COUNT(ThingA.Id) FROM [ThingA] WHERE [ThingA].ThingBId = [ThingB].Id);";
-
-            await _db.Database.ExecuteSqlRawAsync(sql);
-        }
-
-        private async Task RollupThingsCAsync()
-        {
-            string sql =
-           @"UPDATE [ThingC] 
-                SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingC].OwnerId),
-                    TotalThingsA = (SELECT COUNT(ThingA.Id) FROM [ThingA] WHERE [ThingA].ThingCId = [ThingC].Id);";
-
-            await _db.Database.ExecuteSqlRawAsync(sql);
-        }
-
-        private async Task RollupThingsDAsync()
-        {
-            string sql =
-             @"UPDATE [ThingD] 
-                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingD].OwnerId),
-                     TotalThingsE = (SELECT COUNT(ThingE.Id) FROM [ThingE] WHERE [ThingE].ThingDId = [ThingD].Id);";
-
-            await _db.Database.ExecuteSqlRawAsync(sql);
-        }
-
-        private async Task RollupThingsEAsync()
-        {
-            string sql =
-             @"UPDATE [ThingE] 
-                 SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingE].OwnerId),
-                     ThingAName = (SELECT Name FROM [ThingA] WHERE [ThingA].Id = [ThingE].ThingAId),
-                     ThingDName = (SELECT Name FROM [ThingD] WHERE [ThingD].Id = [ThingE].ThingDId);";
 
             await _db.Database.ExecuteSqlRawAsync(sql);
         }
@@ -155,71 +90,15 @@ namespace Jello
 
         #region Record Rollups
 
-        public async Task RollupThingAAsync(int? id)
-        {
-            if (id == null) return;
-
-            await _db.Database.ExecuteSqlInterpolatedAsync(
-                      $@"UPDATE [ThingA] 
-                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingA].OwnerId),
-                                ThingBName = (SELECT Name FROM [ThingB] WHERE [ThingB].Id = [ThingA].ThingBId),
-                                ThingCName = (SELECT Name FROM [ThingC] WHERE [ThingC].Id = [ThingA].ThingCId)
-                          WHERE Id = {id};");
-        }
-
         public async Task RollupProjectAsync(int? id)
         {
             if (id == null) return;
 
             await _db.Database.ExecuteSqlInterpolatedAsync(
                       $@"UPDATE [Project] 
-                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId)
+                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [Project].OwnerId),
+                                TotalIssues = (SELECT COUNT(Issue.Id) FROM [Issue] WHERE [Issue].ProjectId = [Project].Id)
                           WHERE Id = {id};");
-        }
-
-        public async Task RollupThingBAsync(int? id)
-        {
-            if (id == null) return;
-
-            await _db.Database.ExecuteSqlInterpolatedAsync(
-                     $@"UPDATE [ThingB] 
-                           SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingB].OwnerId),
-                               TotalThingsA = (SELECT COUNT(ThingA.Id) FROM [ThingA] WHERE [ThingA].ThingBId = [ThingB].Id)
-                         WHERE Id = {id};");
-        }
-
-        public async Task RollupThingCAsync(int? id)
-        {
-            if (id == null) return;
-
-            await _db.Database.ExecuteSqlInterpolatedAsync(
-                      $@"UPDATE [ThingC] 
-                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingC].OwnerId),
-                                TotalThingsA = (SELECT COUNT(ThingA.Id) FROM [ThingA] WHERE [ThingA].ThingCId = [ThingC].Id)
-                          WHERE Id = {id};");
-        }
-
-        public async Task RollupThingDAsync(int? id)
-        {
-            if (id == null) return;
-
-            await _db.Database.ExecuteSqlInterpolatedAsync(
-                      $@"UPDATE [ThingD] 
-                            SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingD].OwnerId),
-                                TotalThingsE = (SELECT COUNT(ThingE.Id) FROM [ThingE] WHERE [ThingE].ThingDId = [ThingD].Id)
-                          WHERE Id = {id};");
-        }
-
-        public async Task RollupThingEAsync(int? id)
-        {
-            if (id == null) return;
-
-            await _db.Database.ExecuteSqlInterpolatedAsync(
-                    $@"UPDATE [ThingE] 
-                          SET OwnerAlias = (SELECT Alias FROM [User] WHERE [User].Id = [ThingE].OwnerId),
-                              ThingAName = (SELECT Name FROM [ThingA] WHERE [ThingA].Id = [ThingE].ThingAId),
-                              ThingDName = (SELECT Name FROM [ThingD] WHERE [ThingD].Id = [ThingE].ThingDId)
-                        WHERE Id = {id};");
         }
 
         public async Task RollupIssueAsync(int? id)

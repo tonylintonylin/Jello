@@ -9,12 +9,6 @@ namespace Jello
 
     public interface IFilter
     {
-        List<SelectListItem> ThingAItems { get; }
-        List<SelectListItem> ThingBItems { get; }
-        List<SelectListItem> ThingCItems { get; }
-        List<SelectListItem> ThingDItems { get; }
-        List<SelectListItem> ThingEItems { get; }
-
         List<SelectListItem> ProjectItems { get; }
         List<SelectListItem> IssueItems { get; }
 
@@ -26,71 +20,6 @@ namespace Jello
     public class Filter : IFilter
     {
         #region Filters
-
-        public List<SelectListItem> ThingAItems
-        {
-            get
-            {
-                var list = new List<SelectListItem>();
-                list.Add(new SelectListItem { Value = "0", Text = "All Things A", Selected = true });
-                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
-                list.Add(new SelectListItem { Value = "2", Text = "All My Things A" });
-
-                return list;
-            }
-        }
-
-        public List<SelectListItem> ThingBItems
-        {
-            get
-            {
-                var list = new List<SelectListItem>();
-                list.Add(new SelectListItem { Value = "0", Text = "All Things B", Selected = true });
-                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
-                list.Add(new SelectListItem { Value = "2", Text = "All My Things B" });
-
-                return list;
-            }
-        }
-
-        public List<SelectListItem> ThingCItems
-        {
-            get
-            {
-                var list = new List<SelectListItem>();
-                list.Add(new SelectListItem { Value = "0", Text = "All Things C", Selected = true });
-                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
-                list.Add(new SelectListItem { Value = "2", Text = "All My Things C" });
-
-                return list;
-            }
-        }
-
-        public List<SelectListItem> ThingDItems
-        {
-            get
-            {
-                var list = new List<SelectListItem>();
-                list.Add(new SelectListItem { Value = "0", Text = "All Things D", Selected = true });
-                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
-                list.Add(new SelectListItem { Value = "2", Text = "All My Things D" });
-
-                return list;
-            }
-        }
-
-        public List<SelectListItem> ThingEItems
-        {
-            get
-            {
-                var list = new List<SelectListItem>();
-                list.Add(new SelectListItem { Value = "0", Text = "All Things E", Selected = true });
-                list.Add(new SelectListItem { Value = "1", Text = "Recently Viewed" });
-                list.Add(new SelectListItem { Value = "2", Text = "All My Things E" });
-
-                return list;
-            }
-        }
 
         public List<SelectListItem> ProjectItems
         {

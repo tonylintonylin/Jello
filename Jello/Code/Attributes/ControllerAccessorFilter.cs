@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 namespace Jello
 {
     // Gets controller reference to actionmodel
-
     public class ControllerAccessorFilter : IAsyncActionFilter
     {
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)

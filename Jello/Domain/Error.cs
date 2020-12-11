@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Jello.Domain
 {
     public partial class Error
     {
         public int Id { get; set; }
+
         public int? UserId { get; set; }
         public DateTime ErrorDate { get; set; }
         public string Message { get; set; }
@@ -14,6 +14,7 @@ namespace Jello.Domain
         public string Url { get; set; }
         public string HttpReferer { get; set; }
         public string UserAgent { get; set; }
+
         public DateTime CreatedOn { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime ChangedOn { get; set; }

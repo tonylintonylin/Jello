@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace Jello
 {
-    // ** Factory Pattern
-
     public class ClaimsPrincipalFactory : UserClaimsPrincipalFactory<IdentityUser, IdentityRole>
     {
         #region Dependency Injection
@@ -35,8 +33,6 @@ namespace Jello
 
         #endregion
 
-        // ** Factory Method Pattern
-
         public async override Task<ClaimsPrincipal> CreateAsync(IdentityUser appUser)
         {
             try
@@ -47,7 +43,6 @@ namespace Jello
                 var user = _db.User.AsNoTracking().Single(u => u.IdentityId == appUser.Id);
 
                 // Add User claims
-
                 identity.AddClaim(new Claim(ClaimTypes.UserId, user.Id.ToString()));
                 identity.AddClaim(new Claim(ClaimTypes.FirstName, user.FirstName));
                 identity.AddClaim(new Claim(ClaimTypes.LastName, user.LastName));

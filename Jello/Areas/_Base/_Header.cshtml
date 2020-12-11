@@ -1,7 +1,6 @@
 ﻿<div class="main-menu d-flex">
-
     <div class="pt-10 px-15">
-        <img src="~/images/cloud.png" style="height:25px;" />
+        <a href="/home"><img src="~/images/logo.png" style="height:25px;" /></a>
     </div>
 
     <div class="">
@@ -9,17 +8,10 @@
             <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "Home" ? "active" : "")' href="/home">Home</a></li>
             <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "Projects" ? "active" : "")' href="/Projects">Projects</a></li>
             <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "Issues" ? "active" : "")' href="/Issues">Issues</a></li>
-          @*<li class='nav-item'><a class='nav-link @(ViewBag.Menu == "ThingsA" ? "active" : "")' href="/thingsa">Things A</a></li>*@
-            @* <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "ThingsB" ? "active" : "")' href="/thingsb">Things B</a></li> *@
-            @* <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "ThingsC" ? "active" : "")' href="/thingsc">Things C</a></li>
-            <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "ThingsD" ? "active" : "")' href="/thingsd">Things D</a></li>
-            <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "ThingsE" ? "active" : "")' href="/thingse">Things E</a></li> *@
             <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "People" ? "active" : "")' href="/people">People</a></li>
         </ul>
     </div>
-
     <div class="ml-auto d-flex" >
-
         <div class="pt-11 pr-15">
             <div class="dropdown">
                 <a class="no-underline" href="javascript:void(0);" data-toggle="dropdown">
@@ -28,17 +20,11 @@
                     </span>&nbsp;
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    @* <a class="dropdown-item" href="/thingsa/edit">New Thing A</a> *@
-                    @* <a class="dropdown-item" href="/thingsb/edit">New Thing B</a> *@
                     <a class="dropdown-item" href="/projects/edit">New Project</a>
                     <a class="dropdown-item" href="/issues/edit">New Issue</a>
-                    @* <a class="dropdown-item" href="/thingsc/edit">New Thing C</a>
-                    <a class="dropdown-item" href="/thingsd/edit">New Thing D</a>
-                    <a class="dropdown-item" href="/thingse/edit">New Thing E</a> *@
                 </div>
             </div>
         </div>
-
         <div>
             @if (CurrentUser.IsAdmin)
             {
@@ -60,7 +46,7 @@
                     <a class="dropdown-item disabled pl-5" href="/account">
                         <div class="d-flex">
                             <div class="p-5 pr-10">
-                                <div class="avatar" style="background:#12538D;">@CurrentUser.FirstLetter</div>
+                                <div class="avatar" style="background:#36B37E;">@CurrentUser.FirstLetter</div>
                             </div>
                             <div>
                                 <div>@CurrentUser.Name</div>
