@@ -59,10 +59,16 @@ namespace Jello
 
         public async Task<SignInResult> PasswordSignInAsync(string email, string password)
         {
-            var user = _db.User.Single(u => u.Email == email);
-            
-            // Triggers 'CreateAsync' in ClaimsPrincipalFactory
-            return await _signInManager.PasswordSignInAsync(user.IdentityName, password, true, false); // isPersistent, shouldLockout);
+            var emailExists =  await _userManager.FindByEmailAsync(email) != null;
+
+            if(emailExists){
+                var user = _db.User.Single(u => u.Email == email);
+
+                // Triggers 'CreateAsync' in ClaimsPrincipalFactory
+                return await _signInManager.PasswordSignInAsync(user.IdentityName, password, true, false);
+            }
+
+            return await _signInManager.PasswordSignInAsync(email, password, true, false);
         }
 
         public async Task SignOutAsync()

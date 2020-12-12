@@ -40,6 +40,7 @@ namespace Jello.Application.Auth
             };
 
             var result = await _identityService.PasswordSignInAsync(Email, Password);
+            
             if (result.Succeeded)
             {
                 var user = _db.User.SingleOrDefault(u => u.Email == Email);
