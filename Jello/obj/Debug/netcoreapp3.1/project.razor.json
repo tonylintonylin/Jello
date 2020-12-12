@@ -14979,243 +14979,243 @@
   "RootNamespace": "Jello",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Activate.cshtml",
-      "TargetPath": "Areas\\Auth\\Activate.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\Landing.cshtml",
+      "TargetPath": "Application\\Landing\\Landing.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_Issue.cshtml",
-      "TargetPath": "Areas\\_Related\\_Issue.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\_Layout.cshtml",
+      "TargetPath": "Application\\Auth\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Issues\\Detail.cshtml",
-      "TargetPath": "Areas\\Issues\\Detail.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Related\\_Issue.cshtml",
+      "TargetPath": "Application\\_Related\\_Issue.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Issues\\List.cshtml",
-      "TargetPath": "Areas\\Issues\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\Error.cshtml",
+      "TargetPath": "Application\\Landing\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\Edit.cshtml",
-      "TargetPath": "Areas\\Projects\\Edit.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Projects\\Edit.cshtml",
+      "TargetPath": "Application\\Projects\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Forgot.cshtml",
-      "TargetPath": "Areas\\Auth\\Forgot.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Users\\Edit.cshtml",
+      "TargetPath": "Application\\Users\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Alert.cshtml",
-      "TargetPath": "Areas\\_Base\\_Alert.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\ActivateFailed.cshtml",
+      "TargetPath": "Application\\Auth\\ActivateFailed.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\Detail.cshtml",
-      "TargetPath": "Areas\\Projects\\Detail.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\ActivateConfirm.cshtml",
+      "TargetPath": "Application\\Auth\\ActivateConfirm.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\Forgot.cshtml",
+      "TargetPath": "Application\\Auth\\Forgot.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Delete.cshtml",
-      "TargetPath": "Areas\\_Base\\_Delete.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Account\\Password.cshtml",
+      "TargetPath": "Application\\Account\\Password.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Reset.cshtml",
-      "TargetPath": "Areas\\Auth\\Reset.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Users\\Detail.cshtml",
+      "TargetPath": "Application\\Users\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\People\\Detail.cshtml",
-      "TargetPath": "Areas\\People\\Detail.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Layout.cshtml",
+      "TargetPath": "Application\\_Base\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Related\\_Project.cshtml",
-      "TargetPath": "Areas\\_Related\\_Project.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Delete.cshtml",
+      "TargetPath": "Application\\_Base\\_Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Landing\\CatchAll.cshtml",
-      "TargetPath": "Areas\\Landing\\CatchAll.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Users\\List.cshtml",
+      "TargetPath": "Application\\Users\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\List.cshtml",
-      "TargetPath": "Areas\\Projects\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_AdminMenu.cshtml",
+      "TargetPath": "Application\\_Base\\_AdminMenu.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ForgotConfirm.cshtml",
-      "TargetPath": "Areas\\Auth\\ForgotConfirm.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Account\\Edit.cshtml",
+      "TargetPath": "Application\\Account\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\Login.cshtml",
-      "TargetPath": "Areas\\Auth\\Login.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Footer.cshtml",
+      "TargetPath": "Application\\_Base\\_Footer.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Footer.cshtml",
-      "TargetPath": "Areas\\_Base\\_Footer.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Home\\List.cshtml",
+      "TargetPath": "Application\\Home\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ActivateFailed.cshtml",
-      "TargetPath": "Areas\\Auth\\ActivateFailed.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Projects\\List.cshtml",
+      "TargetPath": "Application\\Projects\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Pager.cshtml",
-      "TargetPath": "Areas\\_Base\\_Pager.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Projects\\Detail.cshtml",
+      "TargetPath": "Application\\Projects\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Users\\List.cshtml",
-      "TargetPath": "Areas\\Users\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\Reset.cshtml",
+      "TargetPath": "Application\\Auth\\Reset.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Js.cshtml",
-      "TargetPath": "Areas\\_Base\\_Js.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\ResetFailed.cshtml",
+      "TargetPath": "Application\\Auth\\ResetFailed.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Admin\\List.cshtml",
-      "TargetPath": "Areas\\Admin\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Issues\\Edit.cshtml",
+      "TargetPath": "Application\\Issues\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Layout.cshtml",
-      "TargetPath": "Areas\\_Base\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Alert.cshtml",
+      "TargetPath": "Application\\_Base\\_Alert.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Issues\\Import.cshtml",
-      "TargetPath": "Areas\\Issues\\Import.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Css.cshtml",
+      "TargetPath": "Application\\_Base\\_Css.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Home\\List.cshtml",
-      "TargetPath": "Areas\\Home\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Home\\Recents.cshtml",
+      "TargetPath": "Application\\Home\\Recents.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Users\\Edit.cshtml",
-      "TargetPath": "Areas\\Users\\Edit.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\People\\Detail.cshtml",
+      "TargetPath": "Application\\People\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_AdminMenu.cshtml",
-      "TargetPath": "Areas\\_Base\\_AdminMenu.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Logins\\List.cshtml",
+      "TargetPath": "Application\\Logins\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Projects\\Import.cshtml",
-      "TargetPath": "Areas\\Projects\\Import.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\CatchAll.cshtml",
+      "TargetPath": "Application\\Landing\\CatchAll.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Errors\\List.cshtml",
-      "TargetPath": "Areas\\Errors\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\ResetConfirm.cshtml",
+      "TargetPath": "Application\\Auth\\ResetConfirm.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\People\\List.cshtml",
-      "TargetPath": "Areas\\People\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Issues\\List.cshtml",
+      "TargetPath": "Application\\Issues\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Users\\Detail.cshtml",
-      "TargetPath": "Areas\\Users\\Detail.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Pager.cshtml",
+      "TargetPath": "Application\\_Base\\_Pager.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Landing\\Landing.cshtml",
-      "TargetPath": "Areas\\Landing\\Landing.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Issues\\Import.cshtml",
+      "TargetPath": "Application\\Issues\\Import.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Css.cshtml",
-      "TargetPath": "Areas\\_Base\\_Css.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Account\\Detail.cshtml",
+      "TargetPath": "Application\\Account\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Account\\Detail.cshtml",
-      "TargetPath": "Areas\\Account\\Detail.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Issues\\Detail.cshtml",
+      "TargetPath": "Application\\Issues\\Detail.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Account\\Edit.cshtml",
-      "TargetPath": "Areas\\Account\\Edit.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_ViewImports.cshtml",
+      "TargetPath": "Application\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Logins\\List.cshtml",
-      "TargetPath": "Areas\\Logins\\List.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\_Layout.cshtml",
+      "TargetPath": "Application\\Landing\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ResetConfirm.cshtml",
-      "TargetPath": "Areas\\Auth\\ResetConfirm.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Projects\\Import.cshtml",
+      "TargetPath": "Application\\Projects\\Import.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Issues\\Edit.cshtml",
-      "TargetPath": "Areas\\Issues\\Edit.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Errors\\List.cshtml",
+      "TargetPath": "Application\\Errors\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Account\\Password.cshtml",
-      "TargetPath": "Areas\\Account\\Password.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Js.cshtml",
+      "TargetPath": "Application\\_Base\\_Js.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ResetFailed.cshtml",
-      "TargetPath": "Areas\\Auth\\ResetFailed.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Admin\\List.cshtml",
+      "TargetPath": "Application\\Admin\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\ActivateConfirm.cshtml",
-      "TargetPath": "Areas\\Auth\\ActivateConfirm.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\Login.cshtml",
+      "TargetPath": "Application\\Auth\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Landing\\_Layout.cshtml",
-      "TargetPath": "Areas\\Landing\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_ViewStart.cshtml",
+      "TargetPath": "Application\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Auth\\_Layout.cshtml",
-      "TargetPath": "Areas\\Auth\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\Activate.cshtml",
+      "TargetPath": "Application\\Auth\\Activate.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_Base\\_Header.cshtml",
-      "TargetPath": "Areas\\_Base\\_Header.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Header.cshtml",
+      "TargetPath": "Application\\_Base\\_Header.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Landing\\Error.cshtml",
-      "TargetPath": "Areas\\Landing\\Error.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\ForgotConfirm.cshtml",
+      "TargetPath": "Application\\Auth\\ForgotConfirm.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Related\\_Project.cshtml",
+      "TargetPath": "Application\\_Related\\_Project.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Areas\\Home\\Recents.cshtml",
-      "TargetPath": "Areas\\Home\\Recents.cshtml",
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\People\\List.cshtml",
+      "TargetPath": "Application\\People\\List.cshtml",
       "FileKind": "mvc"
     }
   ],

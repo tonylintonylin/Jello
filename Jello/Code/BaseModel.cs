@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Jello.Areas._Related;
+using Jello.Application._Related;
 using Jello.Domain;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

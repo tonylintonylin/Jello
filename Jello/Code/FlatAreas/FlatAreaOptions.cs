@@ -12,13 +12,13 @@ namespace Jello
     {
         public FlatAreaOptions()
         {
-            RootFolderName = "Areas";
+            RootFolderName = "Application";
             DeriveFolderName = null;
-            AreaPlaceholder = "{Areas}";
+            AreaPlaceholder = "{Application}";
         }
 
         /// <summary>
-        /// The name of the root area folder on disk (default: 'Areas')
+        /// The name of the root area folder on disk (default: 'Application')
         /// </summary>
         public string RootFolderName { get; set; }
 
