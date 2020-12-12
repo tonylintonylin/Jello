@@ -1,2 +1,2 @@
 SELECT *
-FROM ThingA
+FROM Project
