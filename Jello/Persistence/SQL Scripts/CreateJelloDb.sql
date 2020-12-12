@@ -1095,11 +1095,9 @@ INSERT INTO [AspNetUsers] ([Id],[AccessFailedCount],[ConcurrencyStamp],[Email],[
 INSERT INTO [AspNetUsers] ([Id],[AccessFailedCount],[ConcurrencyStamp],[Email],[EmailConfirmed],[LockoutEnabled],[LockoutEnd],[NormalizedEmail],[NormalizedUserName],[PasswordHash],[PhoneNumber],[PhoneNumberConfirmed],[SecurityStamp],[TwoFactorEnabled],[UserName])VALUES('d9aae1ff-fe0d-4bfa-8e96-b8ed5178bb7c',0,'12117619-f937-4be3-b29e-dca18c57348e','peter@company.com',0,1,NULL,'PETER@COMPANY.COM','64AEDFDC-8BAB-463F-B590-D80D5BC64820','AQAAAAEAACcQAAAAEBMqA5Nr79UAX3OYc0o5UfxAozHfARiOKNY+Y+hWEmioUK3ioaSfS5bHemKPAGESiQ==',NULL,0,'baf85e54-aee9-40ee-84e6-6c25322c5b59',0,'64aedfdc-8bab-463f-b590-d80d5bc64820')
 INSERT INTO [AspNetUsers] ([Id],[AccessFailedCount],[ConcurrencyStamp],[Email],[EmailConfirmed],[LockoutEnabled],[LockoutEnd],[NormalizedEmail],[NormalizedUserName],[PasswordHash],[PhoneNumber],[PhoneNumberConfirmed],[SecurityStamp],[TwoFactorEnabled],[UserName])VALUES('9aaf5823-6e45-45ce-b6f8-a78f43faae7b',0,'191d0d18-f03b-4d68-8f08-cdf28ced33bb','tlin@company.com',0,1,NULL,'TLIN@COMPANY.COM','F9E00F46-859D-4163-AD31-D560A559E919','AQAAAAEAACcQAAAAECeaqC2EB4AHWTFcY9lXolTFlIjuqj3ZBe4agDRWNy3Z/GGy1oQ2QLEovSf5aJMhcg==',NULL,0,'e74fbcb5-d9c6-4b5f-b969-d47df17e4557',0,'f9e00f46-859d-4163-ad31-d560a559e919')
 
-INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('18404d8b-8ab3-4f16-914f-d7db45721174','2f89f817-6320-4e0c-9364-9a04033bf256')
-INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('4a4a3f55-b667-4202-905b-3442db50bfd4','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
-INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('565f1c4b-21db-4ab9-a9ff-f1383ad8c57e','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
-INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('87279326-ef9a-4e2a-817d-720cec4c8f4e','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
-INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('95e02adc-4a30-47f6-b63f-1f4bb3502a5d','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
+INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('565f1c4b-21db-4ab9-a9ff-f1383ad8c57e','2f89f817-6320-4e0c-9364-9a04033bf256')
 INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('9aaf5823-6e45-45ce-b6f8-a78f43faae7b','2f89f817-6320-4e0c-9364-9a04033bf256')
+INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('4a4a3f55-b667-4202-905b-3442db50bfd4','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
+INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('87279326-ef9a-4e2a-817d-720cec4c8f4e','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
 INSERT INTO [AspNetUserRoles] ([UserId],[RoleId])VALUES('d9aae1ff-fe0d-4bfa-8e96-b8ed5178bb7c','70c0e727-429d-4f2e-8c30-0000bfdde1e9')
 

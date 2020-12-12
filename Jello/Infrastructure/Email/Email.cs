@@ -74,7 +74,7 @@ namespace Jello
 
         private void Send(string from, string to, string subject, string body)
         {
-            // Add smtp
+            // Add smtp SendGrid
 
             var client = new SmtpClient("mail.company.com");
             client.UseDefaultCredentials = false;
