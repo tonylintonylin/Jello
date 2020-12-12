@@ -22,12 +22,6 @@ namespace Jello.Application.People
         public string Department { get; set; }
         public string LastLoginDate { get; set; }
 
-        public int TotalThingsA { get; set; }
-        public int TotalThingsB { get; set; }
-        public int TotalThingsC { get; set; }
-        public int TotalThingsD { get; set; }
-        public int TotalThingsE { get; set; }
-
         public int TotalProjects { get; set; }
         public int TotalIssues { get; set; }
 

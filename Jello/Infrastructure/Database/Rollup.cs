@@ -75,13 +75,8 @@ namespace Jello
         {
             string sql =
            @"UPDATE [User] 
-            SET TotalThingsA = (SELECT COUNT([ThingA].Id) FROM [ThingA] WHERE [ThingA].OwnerId = [User].Id),
-                TotalThingsB = (SELECT COUNT([ThingB].Id) FROM [ThingB] WHERE [ThingB].OwnerId = [User].Id),
-                TotalThingsC = (SELECT COUNT([ThingC].Id) FROM [ThingC] WHERE [ThingC].OwnerId = [User].Id),
-                TotalThingsD = (SELECT COUNT([ThingD].Id) FROM [ThingD] WHERE [ThingD].OwnerId = [User].Id),
-                TotalProjects = (SELECT COUNT([Project].Id) FROM [Project] WHERE [Project].OwnerId = [User].Id),
-                TotalIssues = (SELECT COUNT([Issue].Id) FROM [Issue] WHERE [Issue].OwnerId = [User].Id),
-                TotalThingsE = (SELECT COUNT([ThingE].Id) FROM [ThingE] WHERE [ThingE].OwnerId = [User].Id);";
+            SET TotalProjects = (SELECT COUNT([Project].Id) FROM [Project] WHERE [Project].OwnerId = [User].Id),
+                TotalIssues = (SELECT COUNT([Issue].Id) FROM [Issue] WHERE [Issue].OwnerId = [User].Id);";
 
             await _db.Database.ExecuteSqlRawAsync(sql);
         }
@@ -118,15 +113,9 @@ namespace Jello
 
              await _db.Database.ExecuteSqlInterpolatedAsync(
                        $@"UPDATE [User] 
-                             SET TotalThingsA = (SELECT COUNT([ThingA].Id) FROM [ThingA] WHERE [ThingA].OwnerId = [User].Id),
-                                 TotalThingsB = (SELECT COUNT([ThingB].Id) FROM [ThingB] WHERE [ThingB].OwnerId = [User].Id),
-                                 TotalThingsC = (SELECT COUNT([ThingC].Id) FROM [ThingC] WHERE [ThingC].OwnerId = [User].Id),
-                                 TotalThingsD = (SELECT COUNT([ThingD].Id) FROM [ThingD] WHERE [ThingD].OwnerId = [User].Id),
-                                 TotalProjects = (SELECT COUNT([Project].Id) FROM [Project] WHERE [Project].OwnerId = [User].Id),
-                                 TotalIssues = (SELECT COUNT([Issue].Id) FROM [Issue] WHERE [Issue].OwnerId = [User].Id),
-                                 TotalThingsE = (SELECT COUNT([ThingE].Id) FROM [ThingE] WHERE [ThingE].OwnerId = [User].Id)
+                             SET TotalProjects = (SELECT COUNT([Project].Id) FROM [Project] WHERE [Project].OwnerId = [User].Id),
+                                 TotalIssues = (SELECT COUNT([Issue].Id) FROM [Issue] WHERE [Issue].OwnerId = [User].Id)
                            WHERE Id = {id ?? 0};");
-
         }
 
         #endregion

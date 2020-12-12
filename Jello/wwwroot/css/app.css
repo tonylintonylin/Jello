@@ -579,21 +579,7 @@ a.selected-none:active {
   font-size: 14px;
   margin: 1px 6px 1px 0;
 }
-.icon-thinga {
-  background: #fa8a63;
-}
-.icon-thingb {
-  background: #ffac00;
-}
-.icon-thingc {
-  background: #20c997;
-}
-.icon-thingd {
-  background: #bca3e5;
-}
-.icon-thinge {
-  background: #63c2de;
-}
+
 .icon-project {
   background: #fa8a63;
 }
