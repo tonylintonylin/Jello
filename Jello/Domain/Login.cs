@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Jello.Domain
 {
     public partial class Login
     {
         public int Id { get; set; }
-
         public int? UserId { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
@@ -13,7 +13,6 @@ namespace Jello.Domain
         public DateTime LoginDate { get; set; }
         public string Result { get; set; }
         public string IpAddress { get; set; }
-
         public DateTime CreatedOn { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime ChangedOn { get; set; }

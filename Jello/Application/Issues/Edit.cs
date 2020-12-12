@@ -23,10 +23,9 @@ namespace Jello.Application.Issues
 
         [Required(ErrorMessage = "Project is required")]
         public int ProjectId { get; set; }
-        public string ProjectTitle { get; set; }
 
-        public int? AssigneeId { get; set; }
-        // public string AssigneeName { get; set; }
+        [Required(ErrorMessage = "Assignee is required")]
+        public int AssigneeId { get; set; }
 
         public int? OwnerId { get; set; }
         public string OwnerAlias { get; set; }
@@ -43,9 +42,7 @@ namespace Jello.Application.Issues
                 OwnerId = _currentUser.Id;
                 OwnerName = _currentUser.Name;
                 AssigneeId = HttpContext.Request.Query["AssigneeId"].GetId();
-                // AssigneeName = HttpContext.Request.Query["AssigneeName"];
                 ProjectId = HttpContext.Request.Query["ProjectId"].GetId();
-                ProjectTitle = HttpContext.Request.Query["ProjectTitle"];
             }
             else
             {
@@ -143,11 +140,12 @@ namespace Jello.Application.Issues
             public MapperProfile()
             {
                 CreateMap<Issue, Edit>()
-                   .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => src.OwnerId == 0 ? "" : _cache.Users[src.OwnerId].Name));
+                    .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => src.OwnerId == 0 ? "" : _cache.Users[src.OwnerId].Name));
 
                 CreateMap<Edit, Issue>()
-                //    .Map(dest => dest.ProjectTitle, opt => opt.MapFrom(src => _cache.Projects[src.ProjectId].Title))
-                   .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias));
+                    .Map(dest => dest.AssigneeName, opt => opt.MapFrom(src => _cache.Users[src.AssigneeId].Alias))
+                    .Map(dest => dest.ProjectTitle, opt => opt.MapFrom(src => _cache.Projects[src.ProjectId].Title))
+                    .Map(dest => dest.OwnerAlias, opt => opt.MapFrom(src => _cache.Users[src.OwnerId.Value].Alias));
             }
         }
 

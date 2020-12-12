@@ -20,7 +20,7 @@ namespace Jello.Application.Issues
         public int? AssigneeId { get; set; }
         public string AssigneeName { get; set; }
 
-        public int? ProjectId { get; set; }
+        public int ProjectId { get; set; }
         public string ProjectTitle { get; set; }
 
         public int? OwnerId { get; set; }
