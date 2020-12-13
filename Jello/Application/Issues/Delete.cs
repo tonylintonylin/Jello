@@ -1,6 +1,7 @@
 using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jello.Application.Issues
@@ -17,6 +18,14 @@ namespace Jello.Application.Issues
 
         public override async Task<IActionResult> PostAsync()
         {
+            var history = _db.IssueHistory.Where(s => s.IssueId == Id);
+            foreach (var row in history)
+            {
+                _db.IssueHistory.Remove(row);
+            }
+
+            await _db.SaveChangesAsync();
+
             var issue = await _db.Issue.SingleOrDefaultAsync(c => c.Id == Id);
 
             _db.Issue.Remove(issue);
