@@ -1,0 +1,36 @@
+@model Dofactory.CRM.Core.Application.Issues.Detail
+@{ 
+   int count = 1;
+}
+
+<br />
+<table class="table table-list table-sm table-hover">
+    <tr>
+        <th class="width-30"></th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Changed By</th>
+        <th>Changed On</th>
+    </tr>
+
+    @if (Model.IssueHistory.Count == 0)
+    {
+        <tr><td colspan="8" class="no-items">No items to display</td></tr>
+    }
+
+    @foreach (var item in Model.IssueHistory)
+    {
+        <tr>
+            <td class="text-center">@count</td>
+            <td>@item.Type</td>
+            <td>@item.Status</td>
+            <td>@item.Priority</td>
+            <td>@item.OwnerName</td>
+            <td>@item.CreatedDate</td>
+        </tr>
+
+        count++;
+    }
+</table>
+
