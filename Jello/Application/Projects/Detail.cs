@@ -23,10 +23,10 @@ namespace Jello.Application.Projects
         public string OwnerName { get; set; }
         
         public DateTime CreatedDate { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public int? CreatedBy { get; set; }
-        public DateTime ChangedOn { get; set; }
-        public int? ChangedBy { get; set; }
+        // public DateTime CreatedOn { get; set; }
+        // public int? CreatedBy { get; set; }
+        // public DateTime ChangedOn { get; set; }
+        // public int? ChangedBy { get; set; }
 
         // Related Lists
         public string Tab { get; set; } = "details";

@@ -26,7 +26,7 @@ namespace Jello.Application.Issues
         public string Type { get; set; }
         public string Priority { get; set; }
         public string Status { get; set; }
-        public DateTime CreatedDate { get; set; }
+        // public DateTime CreatedDate { get; set; }
 
         [Required(ErrorMessage = "Project is required")]
         public int ProjectId { get; set; }
@@ -96,7 +96,7 @@ namespace Jello.Application.Issues
         private async Task SettleInsertAsync(Issue issue)
         {
             if (issue.Type != null) await _issueService.LogChangeHistoryAsync(issue);
-
+            
             _cache.MergeIssue(issue);
 
             await _rollup.RollupProjectAsync(issue.ProjectId);
