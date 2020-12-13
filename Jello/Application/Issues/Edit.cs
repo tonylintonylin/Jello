@@ -107,10 +107,13 @@ namespace Jello.Application.Issues
 
         private async Task SettleUpdateAsync(OriginalIssue original, Issue issue)
         {
-            await _issueService.LogChangeHistoryAsync(issue);
-
             _cache.MergeIssue(issue);
-            
+
+            if (original.Type != issue.Type)
+            {
+                await _issueService.LogChangeHistoryAsync(issue);
+            }
+
             if (original.AssigneeId != issue.AssigneeId)
             {
                 await _rollup.RollupUserAsync(original.AssigneeId);
@@ -131,15 +134,22 @@ namespace Jello.Application.Issues
         private class OriginalIssue
         {
             // Used to temporarily hold a copy of the relevant fields
-            public int ProjectId { get; set; }
-            public int? AssigneeId { get; set; }
-            public int OwnerId { get; set; }
+            public int ProjectId { get; }
+            public int? AssigneeId { get; }
+            public int OwnerId { get; }
 
+            public string Type { get; }
+            public string Status { get; }
+            public string Priority { get; }
+            
             public OriginalIssue(Issue issue)
             {
                 AssigneeId = issue.AssigneeId;
                 ProjectId = issue.ProjectId;
                 OwnerId = issue.OwnerId;
+                Type = issue.Type;
+                Status = issue.Status;
+                Priority = issue.Priority;
             }
         }
 

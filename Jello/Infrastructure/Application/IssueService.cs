@@ -1,7 +1,8 @@
 using System;
 using System.Threading.Tasks;
+using Jello.Domain;
 
-namespace Jello.Domain
+namespace Jello
 {
     #region Interface
 
@@ -31,17 +32,17 @@ namespace Jello.Domain
 
         #region Handlers
 
-        public async Task LogChangeHistoryAsync(Issue Issue)
+        public async Task LogChangeHistoryAsync(Issue issue)
         {
             var issueHistory = new IssueHistory
             {
-                IssueId = Issue.Id,
-                IssueTitle = Issue.Title,
-                Type = Issue.Type,
-                Status = Issue.Status,
-                Priority = Issue.Priority,
+                IssueId = issue.Id,
+                IssueTitle = issue.Title,
+                Type = issue.Type,
+                Status = issue.Status,
+                Priority = issue.Priority,
 
-                // Person that made the change.
+                // Current user making the change.
                 OwnerId = _currentUser.Id, 
                 OwnerAlias = _cache.Users[_currentUser.Id].Alias,
                 CreatedDate = DateTime.Now,
