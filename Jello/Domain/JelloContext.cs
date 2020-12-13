@@ -13,7 +13,8 @@ namespace Jello.Domain
         
         public virtual DbSet<Issue> Issue { get; set; }
         public virtual DbSet<Project> Project { get; set; }
-        
+        public virtual DbSet<IssueHistory> IssueHistory { get; set; }
+
         public virtual DbSet<Error> Error { get; set; }
         public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<Viewed> Viewed { get; set; }
