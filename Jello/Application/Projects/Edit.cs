@@ -17,7 +17,6 @@ namespace Jello.Application.Projects
         public string Title { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
-        public DateTime CreatedDate { get; set; }
 
         public int? OwnerId { get; set; }
         public string OwnerAlias { get; set; }
@@ -87,11 +86,6 @@ namespace Jello.Application.Projects
         {
             _cache.MergeProject(project);
 
-            // if (original.CreatedDate != project.CreatedDate)
-            // {
-            //     await _rollup.RollupAllAsync();
-            // }
-
             if (original.OwnerId != project.OwnerId)
             {
                 await _rollup.RollupUserAsync(original.OwnerId);
@@ -104,12 +98,10 @@ namespace Jello.Application.Projects
             // Used to temporarily hold a copy of the relevant fields
 
             public int OwnerId { get; set; }
-            // public DateTime CreatedDate { get; }
 
             public OriginalProject(Project project)
             {
                 OwnerId = project.OwnerId;
-                // CreatedDate = project.CreatedDate;
             }
         }
 
