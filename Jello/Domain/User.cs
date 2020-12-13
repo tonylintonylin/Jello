@@ -8,10 +8,10 @@ namespace Jello.Domain
         public User()
         {
             Error = new HashSet<Error>();
-            Issue = new HashSet<Issue>();
             Login = new HashSet<Login>();
-            Project = new HashSet<Project>();
             Viewed = new HashSet<Viewed>();
+            Project = new HashSet<Project>();
+            Issue = new HashSet<Issue>();
         }
 
         public int Id { get; set; }
