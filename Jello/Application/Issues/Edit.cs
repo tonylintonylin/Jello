@@ -95,7 +95,9 @@ namespace Jello.Application.Issues
         private async Task SettleInsertAsync(Issue issue)
         {
             if (issue.Type != null) await _issueService.LogChangeHistoryAsync(issue);
-            
+            if (issue.Status != null) await _issueService.LogChangeHistoryAsync(issue);
+            if (issue.Priority != null) await _issueService.LogChangeHistoryAsync(issue);
+
             _cache.MergeIssue(issue);
 
             await _rollup.RollupProjectAsync(issue.ProjectId);
@@ -107,7 +109,7 @@ namespace Jello.Application.Issues
         {
             _cache.MergeIssue(issue);
 
-            if (original.Type != issue.Type)
+            if (original.Type != issue.Type || original.Status != issue.Status || original.Priority != issue.Priority)
             {
                 await _issueService.LogChangeHistoryAsync(issue);
             }
