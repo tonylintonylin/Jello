@@ -1,7 +1,10 @@
+using Dofactory.CRM.Core.Application.Issues;
 using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jello.Application.Issues
@@ -36,16 +39,22 @@ namespace Jello.Application.Issues
         // Related Lists (none)
         public string Tab { get; set; } = "details";
 
+        // History
+        public List<_IssueHistory> IssueHistory { get; set; } = new List<_IssueHistory>();
+
         #endregion
 
         #region Handlers
 
         public override async Task<IActionResult> GetAsync()
         {
-            var Issue = await _db.Issue.SingleOrDefaultAsync(c => c.Id == Id);
-            _mapper.Map(Issue, this);
+            var issue = await _db.Issue.SingleOrDefaultAsync(c => c.Id == Id);
+            _mapper.Map(issue, this);
             
-            await _viewedService.Log(Id, "Issue", Issue.Title);
+            var history = await _db.IssueHistory.Where(o => o.IssueId == issue.Id).ToListAsync();
+            _mapper.Map(history, IssueHistory);
+
+            await _viewedService.Log(Id, "Issue", issue.Title);
 
             return View(this);
         }
@@ -60,6 +69,13 @@ namespace Jello.Application.Issues
             {
                 CreateMap<Issue, Detail>()
                   .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => _cache.Users[src.OwnerId].Name));
+
+                CreateMap<IssueHistory, _IssueHistory>()
+                    .Map(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                    .Map(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                    .Map(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority))
+                    .Map(dest => dest.CreatedDate, opt => opt.MapFrom(src => src.CreatedDate.ToDate()))
+                    .Map(dest => dest.OwnerName, opt => opt.MapFrom(src => _cache.Users[src.OwnerId].Name));
             }
         }
 
