@@ -9,14 +9,6 @@ namespace Jello.Application.Issues
 {
     public class Edit : BaseModel
     {
-        #region Service Locator
-
-        private IIssueService issueService;
-        private IIssueService _issueService =>
-            issueService ??= ServiceLocator.Resolve<IIssueService>();
-
-        #endregion
-
         #region Data
 
         public int Id { get; set; }
@@ -96,8 +88,6 @@ namespace Jello.Application.Issues
 
         private async Task SettleInsertAsync(Issue issue)
         {
-            if (issue.Type != null) await _issueService.LogChangeHistoryAsync(issue);
-
             _cache.MergeIssue(issue);
 
             await _rollup.RollupProjectAsync(issue.ProjectId);
