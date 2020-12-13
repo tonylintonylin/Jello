@@ -45,6 +45,7 @@ namespace Jello
 
             // Applications services
             services.AddScoped<IViewedService, ViewedService>();
+            services.AddScoped<IIssueService, IssueService>();
 
             // Identity support
             services.AddScoped<ICurrentUser, CurrentUser>();

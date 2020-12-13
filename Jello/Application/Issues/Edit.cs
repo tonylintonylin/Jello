@@ -12,8 +12,7 @@ namespace Jello.Application.Issues
         #region Service Locator
 
         private IIssueService issueService;
-        private IIssueService _issueService =>
-            issueService ??= ServiceLocator.Resolve<IIssueService>();
+        private IIssueService _issueService => issueService ??= ServiceLocator.Resolve<IIssueService>();
 
         #endregion
 
