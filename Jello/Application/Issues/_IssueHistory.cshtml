@@ -1,7 +1,4 @@
 @model Jello.Application.Issues.Detail
-@{ 
-   int count = 1;
-}
 
 <br />
 <table class="table table-list table-sm table-hover">
@@ -18,28 +15,62 @@
     {
         <tr><td colspan="8" class="no-items">No items to display</td></tr>
     }
-
-    <tr>
-        <td>Most Recent:</td>
-        <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Type</td>
-        <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Status</td>
-        <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Priority</td>
-        <td>@Model.IssueHistory[Model.IssueHistory.Count-1].OwnerName</td>
-        <td>@Model.IssueHistory[Model.IssueHistory.Count-1].CreatedDate</td>
-    </tr>
-
-    @for (int i = Model.IssueHistory.Count - 1; i >= 0 ; i--)
-    {
+    else if (Model.IssueHistory.Count == 1){
+        <tr>
+            <td>Issue Created:</td>
+            <td>@Model.IssueHistory[0].Type</td>
+            <td>@Model.IssueHistory[0].Status</td>
+            <td>@Model.IssueHistory[0].Priority</td>
+            <td>@Model.IssueHistory[0].OwnerName</td>
+            <td>@Model.IssueHistory[0].CreatedDate</td>
+        </tr>
+    }
+    else if (Model.IssueHistory.Count == 2){
         <tr>
             <td>Updated to:</td>
-            <td>@Model.IssueHistory[i].Type</td>
-            <td>@Model.IssueHistory[i].Status</td>
-            <td>@Model.IssueHistory[i].Priority</td>
-            <td>@Model.IssueHistory[i].OwnerName</td>
-            <td>@Model.IssueHistory[i].CreatedDate</td>
+            <td>@Model.IssueHistory[1].Type</td>
+            <td>@Model.IssueHistory[1].Status</td>
+            <td>@Model.IssueHistory[1].Priority</td>
+            <td>@Model.IssueHistory[1].OwnerName</td>
+            <td>@Model.IssueHistory[1].CreatedDate</td>
         </tr>
-
-        count++;
-    } 
+        <tr>
+            <td>Issue Created:</td>
+            <td>@Model.IssueHistory[0].Type</td>
+            <td>@Model.IssueHistory[0].Status</td>
+            <td>@Model.IssueHistory[0].Priority</td>
+            <td>@Model.IssueHistory[0].OwnerName</td>
+            <td>@Model.IssueHistory[0].CreatedDate</td>
+        </tr> 
+    }
+    else{
+        <tr>
+            <td>Most Recent:</td>
+            <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Type</td>
+            <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Status</td>
+            <td>@Model.IssueHistory[Model.IssueHistory.Count-1].Priority</td>
+            <td>@Model.IssueHistory[Model.IssueHistory.Count-1].OwnerName</td>
+            <td>@Model.IssueHistory[Model.IssueHistory.Count-1].CreatedDate</td>
+        </tr>
+        @for (int i = Model.IssueHistory.Count - 1; i >= 2 ; i--)
+        {
+            <tr>
+                <td>Updated to:</td>
+                <td>@Model.IssueHistory[i].Type</td>
+                <td>@Model.IssueHistory[i].Status</td>
+                <td>@Model.IssueHistory[i].Priority</td>
+                <td>@Model.IssueHistory[i].OwnerName</td>
+                <td>@Model.IssueHistory[i].CreatedDate</td>
+            </tr>
+        }
+        <tr>
+            <td>Issue Created:</td>
+            <td>@Model.IssueHistory[0].Type</td>
+            <td>@Model.IssueHistory[0].Status</td>
+            <td>@Model.IssueHistory[0].Priority</td>
+            <td>@Model.IssueHistory[0].OwnerName</td>
+            <td>@Model.IssueHistory[0].CreatedDate</td>
+        </tr> 
+    }
 </table>
 
