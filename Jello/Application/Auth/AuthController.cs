@@ -28,12 +28,12 @@ namespace Jello.Application.Auth
             var model = new Login { ReturnUrl = returnUrl };
 
             // For demo purposes
-            await GetAsync(model);
+            GetUsers(model);
             return View(model);
         }
 
         // For demo purposes
-        private async Task GetAsync(Login model)
+        private void GetUsers(Login model)
         {
             var list = new List<_User>();
 
