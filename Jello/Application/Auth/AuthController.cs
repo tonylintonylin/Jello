@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Jello.Application.Auth
 {
-    [Menu("Login")]
+    [Menu("")]
     public class AuthController : Controller
     {
-        #region Dependency Injection
+        #region Dependency Injection For Demo Purposes Only
 
         private readonly JelloContext _db;
 
@@ -22,7 +22,7 @@ namespace Jello.Application.Auth
         
         #region Login
 
-        [HttpGet("login")]
+        [HttpGet("")]
         public async Task<ViewResult> Login(string returnUrl)
         {
             var model = new Login { ReturnUrl = returnUrl };
@@ -56,11 +56,7 @@ namespace Jello.Application.Auth
             model.Users = list;
         }
 
-        // [HttpGet("login")]
-        // public IActionResult Login(string returnUrl) => new Login { ReturnUrl = returnUrl }.Get();
-
-
-        [HttpPost("login")]
+        [HttpPost("")]
         public async Task<IActionResult> Login([FromForm]Login model) => await model.PostAsync();
 
         #endregion
@@ -116,5 +112,12 @@ namespace Jello.Application.Auth
         public IActionResult ResetFailed() => View();
 
         #endregion
+
+        [HttpGet("error")]
+        public IActionResult Error(Error model) => model.Get();
+
+        // Catches all requests for which there is no route handler
+        [Route("{*url}", Order = 9999)]
+        public IActionResult CatchAll(CatchAll model) => model.GetOrPost();
     }
 }

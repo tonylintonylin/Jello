@@ -14994,11 +14994,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\Error.cshtml",
-      "TargetPath": "Application\\Landing\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Projects\\Edit.cshtml",
       "TargetPath": "Application\\Projects\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15064,6 +15059,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\CatchAll.cshtml",
+      "TargetPath": "Application\\Auth\\CatchAll.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\Error.cshtml",
+      "TargetPath": "Application\\Auth\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_Base\\_Footer.cshtml",
       "TargetPath": "Application\\_Base\\_Footer.cshtml",
       "FileKind": "mvc"
@@ -15121,11 +15126,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Logins\\List.cshtml",
       "TargetPath": "Application\\Logins\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\CatchAll.cshtml",
-      "TargetPath": "Application\\Landing\\CatchAll.cshtml",
       "FileKind": "mvc"
     },
     {

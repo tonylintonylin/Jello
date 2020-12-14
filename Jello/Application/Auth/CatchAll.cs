@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Jello.Application.Landing
+namespace Jello.Application.Auth
 {
     public class CatchAll : BaseModel
     {

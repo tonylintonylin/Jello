@@ -58,7 +58,7 @@ namespace Jello
 
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = new PathString("/login");
+                options.LoginPath = new PathString("/");
                 options.SlidingExpiration = true;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
             });
