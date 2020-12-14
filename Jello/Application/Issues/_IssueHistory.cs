@@ -1,4 +1,4 @@
-namespace Dofactory.CRM.Core.Application.Issues
+namespace Jello.Application.Issues
 {
     public class _IssueHistory
     {

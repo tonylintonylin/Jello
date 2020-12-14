@@ -1,4 +1,3 @@
-using Dofactory.CRM.Core.Application.Issues;
 using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

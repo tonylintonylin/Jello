@@ -982,6 +982,34 @@ a.selected-none:active {
 }
 
 /* ============ 
+   Login
+   =============*/
+
+.login-card {
+  background: #fff;
+  padding: 20px 15px 15px 15px;
+  margin: 0;
+  border-radius: 0px;
+  color: #888;
+  width: 100%;
+}
+.login-box:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #666;
+}
+
+.login-table {
+  width: 100%;
+}
+.login-table tr td {
+  padding: 1px 4px;
+}
+.login-table tr td:first-child {
+  width: 80px;
+  text-align: left;
+}
+
+/* ============ 
    Edit pages
    =============*/
 
