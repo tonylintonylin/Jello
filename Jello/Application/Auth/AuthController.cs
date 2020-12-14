@@ -23,7 +23,7 @@ namespace Jello.Application.Auth
         #region Login
 
         [HttpGet("")]
-        public async Task<ViewResult> Login(string returnUrl)
+        public ViewResult Login(string returnUrl)
         {
             var model = new Login { ReturnUrl = returnUrl };
 
