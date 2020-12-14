@@ -35,4 +35,21 @@
     <div class="ml-auto w-sm-50 text-white p-20" style="height:725px;background:url(/images/login.jpg) no-repeat;">
         <h2>Jello</h2>
     </div>
+        <div class="col-4">
+
+        <div class="row">
+            <div class="col-11 pl-30 py-10 font-weight-bold">
+                To quickly login, click on any of the user cards below.
+            </div>
+        </div>
+
+        <div class="py-20 px-15 mr-30">
+
+            @foreach (var user in Model.Users)
+            {
+                @await Html.PartialAsync("_User", user)
+            }
+
+        </div>
+    </div>
 </div>

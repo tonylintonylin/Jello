@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Jello.Domain;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jello.Application.Auth
@@ -6,10 +9,56 @@ namespace Jello.Application.Auth
     [Menu("Login")]
     public class AuthController : Controller
     {
+        #region Dependency Injection
+
+        private readonly JelloContext _db;
+
+        public AuthController(JelloContext db)
+        {
+            _db = db;
+        }
+
+        #endregion
+        
         #region Login
 
         [HttpGet("login")]
-        public IActionResult Login(string returnUrl) => new Login { ReturnUrl = returnUrl }.Get();
+        public async Task<ViewResult> Login(string returnUrl)
+        {
+            var model = new Login { ReturnUrl = returnUrl };
+
+            // For demo purposes
+            await GetAsync(model);
+            return View(model);
+        }
+
+        // For demo purposes
+        private async Task GetAsync(Login model)
+        {
+            var list = new List<_User>();
+
+            var users = _db.User.Where(u => new int?[] { 1, 2, 3, 4, 5 }.Contains(u.Id));
+
+            foreach (var user in users.OrderBy(u => u.Id == 1 ? 10 : u.Id)) 
+            {
+                var _user = new _User
+                {
+                    UserId = user.Id,
+                    User = user.Name,
+                    Role = user.Role,
+                    Email = user.Email,
+                    Password = "Secret123!"
+                };
+
+                list.Add(_user);
+            }
+
+            model.Users = list;
+        }
+
+        // [HttpGet("login")]
+        // public IActionResult Login(string returnUrl) => new Login { ReturnUrl = returnUrl }.Get();
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm]Login model) => await model.PostAsync();

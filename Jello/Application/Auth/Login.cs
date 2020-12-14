@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace Jello.Application.Auth
         public bool RememberMe { get; set; }
 
         public string ReturnUrl { get; set; }
+
+        public List<_User> Users = new List<_User>();
 
         #endregion
 

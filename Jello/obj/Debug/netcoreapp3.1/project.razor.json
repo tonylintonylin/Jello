@@ -15134,6 +15134,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\_User.cshtml",
+      "TargetPath": "Application\\Auth\\_User.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Issues\\List.cshtml",
       "TargetPath": "Application\\Issues\\List.cshtml",
       "FileKind": "mvc"

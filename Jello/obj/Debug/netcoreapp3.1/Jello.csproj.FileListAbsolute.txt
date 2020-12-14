@@ -425,3 +425,4 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\_Re
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\_ViewImports.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\_ViewStart.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Issues\_IssueHistory.cshtml.g.cs
+C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Auth\_User.cshtml.g.cs
