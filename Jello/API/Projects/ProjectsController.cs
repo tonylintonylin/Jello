@@ -6,7 +6,7 @@ using static Jello.API.Projects.List;
 namespace Jello.API.Projects
 {
     [ApiController]
-    [Authorize]
+    // [Authorize]
     [Menu("Projects")]
     [Route("api/[controller]")]
     public class ProjectsController : Controller
