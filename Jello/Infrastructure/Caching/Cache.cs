@@ -80,8 +80,6 @@ namespace Jello
         {
             get
             {
-                // ** Lazy load pattern 
-
                 var dictionary = _memoryCache.Get(MetaTypesKey) as Dictionary<string, MetaType>;
                 if (dictionary == null)
                 {
@@ -121,8 +119,6 @@ namespace Jello
         {
             get
             {
-                // ** Lazy load pattern 
-
                 if (!(_memoryCache.Get(ProjectsKey) is Dictionary<int, Project> dictionary))
                 {
                     lock (locker)
@@ -172,8 +168,6 @@ namespace Jello
         {
             get
             {
-                // ** Lazy load pattern 
-
                 if (!(_memoryCache.Get(IssuesKey) is Dictionary<int, Issue> dictionary))
                 {
                     lock (locker)
@@ -223,8 +217,6 @@ namespace Jello
         {
             get
             {
-                // ** Lazy load pattern 
-
                 if (!(_memoryCache.Get(UsersKey) is Dictionary<int, User> dictionary))
                 {
                     lock (locker)

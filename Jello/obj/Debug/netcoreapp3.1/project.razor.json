@@ -14979,11 +14979,6 @@
   "RootNamespace": "Jello",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\Landing.cshtml",
-      "TargetPath": "Application\\Landing\\Landing.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Auth\\_Layout.cshtml",
       "TargetPath": "Application\\Auth\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -15166,11 +15161,6 @@
     {
       "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\_ViewImports.cshtml",
       "TargetPath": "Application\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Application\\Landing\\_Layout.cshtml",
-      "TargetPath": "Application\\Landing\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {

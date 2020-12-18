@@ -424,3 +424,5 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Iss
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Auth\_User.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Auth\CatchAll.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Auth\Error.cshtml.g.cs
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll

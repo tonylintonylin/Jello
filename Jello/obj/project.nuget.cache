@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mlTVj+qG989Jg1euG0c9k9j850CehZyiuwEEP1HODIpvoSXvb6T2Hx7IU0V4Du3Um4W1ocwSPwlSp3DhOP+mqA==",
+  "dgSpecHash": "YX4AO34BtWy5734UIr2gNK/vp+HMSAVVepwnziSXnz3dnHCvBWyRxUSHYB/gPe5wZXZwjTLzQD4gzq8G6HdpfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tonyl\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\documentformat.openxml\\2.10.1\\documentformat.openxml.2.10.1.nupkg.sha512",
+    "C:\\Users\\tonyl\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\tonyl\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.3\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.3.nupkg.sha512",
