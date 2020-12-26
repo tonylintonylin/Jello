@@ -86,7 +86,7 @@ namespace Jello
             {
                 options.Filters.Add(typeof(GlobalExceptionFilter));
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-                options.Filters.Add(typeof(ControllerAccessorFilter)); // required for ultra-clean architecture
+                options.Filters.Add(typeof(ControllerAccessorFilter));
 
             }).AddFlatAreas(new FlatAreaOptions())
               .AddRazorRuntimeCompilation();

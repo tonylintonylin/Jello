@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YX4AO34BtWy5734UIr2gNK/vp+HMSAVVepwnziSXnz3dnHCvBWyRxUSHYB/gPe5wZXZwjTLzQD4gzq8G6HdpfA==",
+  "dgSpecHash": "IzKAKWoi5MZg56HCd4LzmKorlgrqWS9RKt70GGwRthsHLUYmxitQ6Yho2kyV17P3RFeRICRhqBLFEP8Ehu95bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
   "expectedPackageFiles": [
@@ -121,8 +121,7 @@
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\tonyl\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\tonyl\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

@@ -11,7 +11,8 @@ namespace Jello.Application.Auth
         {
              await _identityService.SignOutAsync();
 
-             return RedirectToAction("Login");
+            // return RedirectToAction("Login");
+            return Redirect("/");
         }
 
         #endregion

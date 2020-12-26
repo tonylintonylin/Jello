@@ -6172,11 +6172,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
+      "projectUniqueName": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
       "projectName": "Jello",
-      "projectPath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
+      "projectPath": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\Jello.csproj",
       "packagesPath": "C:\\Users\\tonyl\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\tonyl\\Desktop\\Jello\\Jello\\obj\\",
+      "outputPath": "C:\\Users\\tonyl\\Desktop\\Jello\\Jello\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tonyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6270,10 +6270,6 @@
           {
             "name": "Microsoft.AspNetCore.App.Ref",
             "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.10, 3.1.10]"
           }
         ],
         "frameworkReferences": {
@@ -6284,7 +6280,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.20601.7\\RuntimeIdentifierGraph.json"
       }
     }
   }
