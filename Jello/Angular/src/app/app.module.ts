@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { IssuesComponent } from './issues/issues.component';
 
@@ -10,13 +15,16 @@ import { IssuesComponent } from './issues/issues.component';
   declarations: [
     AppComponent,
     ProjectsComponent,
-    IssuesComponent
+    IssuesComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -426,3 +426,11 @@ C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Aut
 C:\Users\tonyl\Desktop\Jello\Jello\obj\Debug\netcoreapp3.1\Razor\Application\Auth\Error.cshtml.g.cs
 C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\MediatR.dll
 C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\angular.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\e2e\tsconfig.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\package-lock.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\package.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\tsconfig.app.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\tsconfig.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\tsconfig.spec.json
+C:\Users\tonyl\Desktop\Jello\Jello\bin\Debug\netcoreapp3.1\Angular\tslint.json
