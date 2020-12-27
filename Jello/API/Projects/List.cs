@@ -36,13 +36,13 @@ namespace Jello.API.Projects
 
         #endregion
 
+        #region Helpers
+
         public class Output
         {
             public int rows { get; set; }
             public List<Project> items { get; set; } 
         }
-
-        #region Helpers
 
         protected IQueryable<Project> BuildQuery()
         {

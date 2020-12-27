@@ -3,6 +3,7 @@ using Jello.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,19 +33,33 @@ namespace Jello.API.Projects
 
         #region Handlers
 
-        public override async Task<IActionResult> GetAsync()
+        public async Task<DetailOutput> GetAsync()
         {
             var project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
             _mapper.Map(project, this);
             
             var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(6).ToListAsync();
             _related.Prepare(issues, Issues, project.TotalIssues, project.Id, project.Title);
-            
-            await _viewedService.Log(Id, "Project", project.Title);
 
-            return View(this);
+            await _viewedService.Log(Id, "Project", project.Title);
+            
+            var output = new DetailOutput { detail = project, related = issues };
+
+            return output;
+
+            // return View(this);
         }
 
+        #endregion
+
+        #region Helpers
+
+        public class DetailOutput
+        {
+            public Project detail { get; set; }
+            public List<Issue> related { get; set; }
+        }
+        
         #endregion
 
         #region Mapping
