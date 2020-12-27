@@ -37,7 +37,7 @@ namespace Jello.API.Projects
         {
             var project = await _db.Project.SingleOrDefaultAsync(c => c.Id == Id);
             _mapper.Map(project, this);
-            
+
             var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(6).ToListAsync();
             _related.Prepare(issues, Issues, project.TotalIssues, project.Id, project.Title);
 
@@ -46,8 +46,6 @@ namespace Jello.API.Projects
             var output = new DetailOutput { detail = project, related = issues };
 
             return output;
-
-            // return View(this);
         }
 
         #endregion

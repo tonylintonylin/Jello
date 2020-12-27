@@ -15,8 +15,11 @@ namespace Jello.API.Projects
         [HttpGet]
         public async Task<Output> List([FromQuery]List model) => await model.GetAsync();
 
-        [HttpGet("{id}", Order = 10)]
-        public async Task<DetailOutput> Detail([FromQuery]Detail model) => await model.GetAsync();
+        // [HttpGet("{id}", Order = 10)]
+        // public async Task<DetailOutput> Detail([FromQuery]Detail model) => await model.GetAsync();
+
+        [HttpGet("{id}")]
+        public async Task<DetailOutput> Detail(int id) => await new Detail { Id = id }.GetAsync();
 
         // [HttpGet("edit/{id?}")]
         // public async Task<IActionResult> Edit(int id) => await new Edit { Id = id }.GetAsync();
