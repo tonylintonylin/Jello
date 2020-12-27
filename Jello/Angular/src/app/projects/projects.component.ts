@@ -15,9 +15,9 @@ export class ProjectsComponent implements AfterViewInit {
     'index',
     'Title',
     'Type',
-    // 'Issues',
+    'TotalIssues',
     'OwnerAlias',
-    // 'CreateOn',
+    'CreatedDate',
   ];
   Database: ExampleHttpDatabase | null;
   data: Project[] = [];
@@ -70,7 +70,6 @@ export class ProjectsComponent implements AfterViewInit {
   }
 }
 
-
 export interface ProjectApi {
   items: Project[];
   rows: number;
@@ -79,7 +78,9 @@ export interface ProjectApi {
 export interface Project {
   title: string;
   type: string;
+  totalIssues: number;
   ownerAlias: string;
+  createdDate: string;
 }
 
 /** An example database that the data source uses to retrieve data for the table. */
