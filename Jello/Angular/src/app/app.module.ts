@@ -11,6 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -33,6 +34,7 @@ import { IssuesComponent } from './issues/issues.component';
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
