@@ -63,6 +63,18 @@
                 </td>
             </ng-container> -->
 
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <div class="example-button-container">
+                        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>delete</mat-icon>
+                            <mat-icon>create</mat-icon>
+                        </button>
+                    </div>
+                </mat-cell>
+            </ng-container>
+
             <!-- Delete Column -->
             <!-- <ng-container matColumnDef="">
                 <div class="example-button-container">
@@ -79,3 +91,27 @@
 
     <mat-paginator [length]="resultsLength" [pageSize]="15"></mat-paginator>
 </div>
+
+<!-- <table cdk-table [dataSource]="data"> -->
+<!-- User name Definition -->
+<!-- <ng-container cdkColumnDef="index">
+        <th cdk-header-cell *cdkHeaderCellDef> index </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.index}} </td>
+    </ng-container> -->
+
+<!-- Age Definition -->
+<!-- <ng-container cdkColumnDef="Title">
+        <th cdk-header-cell *cdkHeaderCellDef> PROJECT </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Title}} </td>
+    </ng-container> -->
+
+<!-- Title Definition -->
+<!-- <ng-container cdkColumnDef="type">
+        <th cdk-header-cell *cdkHeaderCellDef> type </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.type}} </td>
+    </ng-container> -->
+
+<!-- Header and Row Declarations -->
+<!-- <tr cdk-header-row *cdkHeaderRowDef="['index', 'Title', 'type']"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: ['index', 'Title', 'type']"></tr>
+</table> -->

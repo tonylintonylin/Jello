@@ -18,7 +18,7 @@ export class ProjectsComponent implements AfterViewInit {
     'TotalIssues',
     'OwnerAlias',
     'CreatedDate',
-    // 'actions',
+    'actions',
   ];
   Database: ExampleHttpDatabase | null;
   data: Project[] = [];
