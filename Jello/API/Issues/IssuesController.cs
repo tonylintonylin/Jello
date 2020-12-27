@@ -9,7 +9,7 @@ namespace Jello.API.Issues
     // [Authorize]
     [Menu("Issues")]
     [Route("api/[controller]")]
-    public class IssuesController : Controller
+    public class IssuesController : ControllerBase
     {
         [HttpGet]
         public async Task<Output> List([FromQuery]List model) => await model.GetAsync();
