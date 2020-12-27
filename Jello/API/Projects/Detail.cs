@@ -40,8 +40,8 @@ namespace Jello.API.Projects
 
             var issues = await _db.Issue.Where(o => o.ProjectId == project.Id).OrderByDescending(o => o.Id).Take(6).ToListAsync();
             _related.Prepare(issues, Issues, project.TotalIssues, project.Id, project.Title);
-
-            await _viewedService.Log(Id, "Project", project.Title);
+            // implement recently viewed when identity is implemented
+            // await _viewedService.Log(Id, "Project", project.Title);
             
             var output = new DetailOutput { detail = project, related = issues };
 

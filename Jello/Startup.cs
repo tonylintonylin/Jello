@@ -89,11 +89,15 @@ namespace Jello
                 options.Filters.Add(typeof(ControllerAccessorFilter));
 
             }).AddFlatAreas(new FlatAreaOptions())
-              .AddRazorRuntimeCompilation();
+              .AddRazorRuntimeCompilation()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
+
             services.AddCors(opt =>
             {
                 opt.AddPolicy("CorsPolicy", policy =>
